@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KWK Level 1 Helper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">KWK Level 1 Helper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/command_line">Command Line</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ruby">Ruby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/css">CSS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              HTML & CSS Life Hacks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/bootstrap">Styling with Bootstrap</a>
+              <a class="dropdown-item" href="/ui_gradients">Backgrounds with UI Gradients</a>
+              <a class="dropdown-item" href="/google_fonts">Fonts with Google Fonts</a>
+              <a class="dropdown-item" href="/icons">Icons with Font Awesome</a>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/sinatra">Sinatra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/advice">Advice</a>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>
+
+    <h1 class="heading">Sinatra</h1>
+    <p class="info">
+      <strong>NOTE:</strong><br>
+      Sinatra may be very confusing and difficult to learn/pick up for beginner coders. This page <strong>does not</strong> have everything you need to know about Sinatra! Please pay attention in class for this lesson because live demos are really the best way to get the hang of it. If you still need help, you can always look on Youtube for intro to Sinatra applications. I will link one that I found particularly helpful down below. I would also suggest doing many of the Learn Co’s labs provided to you on Sinatra because it will be super helpful later on when you are working on your Web Application Final Project! Sinatra Applications are more impressive than static sites because your site is able to be dynamic.
+    </p>
+    
+    <div style="padding:20px;">
+    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=sp8TL37ymGk" role="button" target="_blank">Link to Beginner Sinatra Tutorial</a>
+    </div>
+    
+    <h3 class="subheader">Static vs. Dynamic</h3>
+    <p class="info">
+      It is important to make a distinction between the two different types of websites: static and dynamic. A static site does not change. The contents of the site won’t change unless the developer opens up the HTML file and modifies it themselves. A dynamic web application is where the content changes based on the user input. Your favorite websites are probably dynamic (like Facebook, Twitter, Instagram, etc.). This is the type of application you will hopefully build for your final project. It is more sophisticated and impressive because it is more complicated to build dynamic sites... we will need the help of Sinatra.
+    </p>
+    
+    <h3 class="subheader">Introduction - Why We Use Sinatra</h3>
+    <p class="info">
+      <strong>Sinatra</strong> is a Ruby Application that can respond to HTTP Requests. It is a <strong>Domain Specific Language</strong> implemented in Ruby, used for writing web applications. Sinatra allows us to have some pre-written methods that we can include in our applications to turn them into Ruby web applications (and not just static websites). Our applications will be written using HTML, CSS, and Ruby code! Without using Sinatra as a framework, we would have to write much more code... it would just make everything more complicated. Using a framework gives us structure and libraries that allow us to focus on our specific application by providing us with solutions to common needs.
+    </p>
+    
+    <h3 class="subheader">Downloading Sinatra</h3>
+    <p class="info">
+      Simply type into your terminal <kbd>gem install sinatra</kbd> and your terminal will install Sinatra right before your eyes!
+    </p>
+    
+    <h3 class="subheader">Learn-Co-Curriculum's Sinatra Starter</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="info" style="padding:20px;">
+          This example provides you with the bare bones of a working Sinatra Application!
+          </p>
+        </div>
+        <div class="col">
+          <div style="padding:20px;">
+            <a class="btn btn-primary btn-lg" style="padding:10px;" href="https://github.com/learn-co-curriculum/kwk-sinatra-starter " target="_blank">
+            Sinatra Starter on Github
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <h3 class="subheader">ERB Files (Embedded Ruby)</h3>
+    <p class="info">
+      <strong>ERB <code>&lt;%= %&gt;</code> AND <code>&lt;% %&gt;</code></strong><br>
+      In the example given to us by Learn-Co, there is something that we haven’t seen before that is inside the index.html.erb file... it’s Ruby inside of HTML! The rand(1...100) and Time.now().strftime(“%c”) methods are inside the HTML code. This is possible with the use of ERB, which is embedded Ruby. Anytime you want dynamic content, you can put it into your HTML by wrapping the Ruby code in the following tags: <code>&lt;%= %&gt;</code> or <code>&lt;% %&gt;</code>. When the ERB file is then read by Sinatra, these tags are read and executed like regular lines of Ruby code.
+      <br><br>
+      <code>&lt;%= %&gt;</code> will execute the Ruby code and then print it as HTML.
+      <br>
+      <code>&lt;% %&gt;</code> will execute the Ruby code, but it will not print.
+      <br><br>
+      This allows us to easily choose what we would like to display and what we would like to have just run in the background. Be sure to play around with this and complete some of the labs provided in the curriculum to solidify this concept. This will be HUGE when doing your final project.
+      <br><br>
+      Here is a bit of code from my rps game! You can see places where I only used <code>&lt;% %&gt;</code> because I didn’t want that Ruby code to actually print, but sometimes I did use <code>&lt;%= %&gt;</code> when I did want it to print as HTML. If you’re wondering what @game means and where it even came from, keep reading to learn about incorporating variables in your ERB.
+    </p>
+    
+    <img src="/images/sinatra1.jpeg" alt="Sinatra 1" style="width:750px;height:400px;" class="center"><br>
+    
+    <p class="info">
+      <strong>Variables</strong><br>
+      You can also pass Ruby variables into the HTML files from your Application Controller. If you make sure to add the @ sign in front of your variable names, you will be able to access these variables in your ERB file.
+      <br><br>
+      This example is some code taken from a rock, paper, scissors web application I created. The variables @player_move, @game, and @computer_move are all accessible in the rps_game.erb file because they are in the same scope of the post ‘/play’ do. Note that the index.erb file will not know anything about these variables because it is not in the same scope.
+    </p>
+    
+    <img src="/images/sinatra2.jpeg" alt="Sinatra 2" style="width:750px;height:400px;" class="center"><br>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="info" style="padding:20px;">
+          Feel free to take a look at my rps game on Github and play it yourself! It is a simple Ruby web application using all the techniques that I talk about on this website. If you were wondering, I coded this using Cloud9 and I deployed it using Heroku!
+          </p>
+        </div>
+        <div class="col">
+          <div style="padding:20px;">
+            <a class="btn btn-primary btn-lg" style="padding:10px;" href="https://github.com/JustineKoa/rock-paper-scissors" target="_blank">
+            View the complete code for it on Github here!
+            </a>
+          </div>
+          <div style="padding:20px;">
+            <a class="btn btn-primary btn-lg" style="padding:10px;" href="https://kwk-rps.herokuapp.com/" target="_blank">
+            Try it yourself! https://kwk-rps.herokuapp.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <p class="info">
+      I highly recommend that you complete <strong>all</strong> the labs regarding Sinatra, but if you don’t have time to complete them all... I recommend the following: <strong>Sinatra Hello World Lab, Sinatra Basic Routes Lab, Sinatra Basic Views Lab, Sinatra Views Lab, HTML Forms and Sinatra Params Readme, and Sinatra View and Controller Readme!</strong> If you’re on a roll and dying for a challenge, try doing your own rps game! There is a lab for it on Learn, but don’t stress out if you can’t pass the tests perfectly. Create your own specifications and get it working how you want it.
+    </p>
+    
+    <p class="subheader">
+      And that's all for now! Good luck with your final project!
+    </p>
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

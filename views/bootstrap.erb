@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KWK Level 1 Helper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">KWK Level 1 Helper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/command_line">Command Line</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ruby">Ruby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/css">CSS</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              HTML & CSS Life Hacks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/bootstrap">Styling with Bootstrap</a>
+              <a class="dropdown-item" href="/ui_gradients">Backgrounds with UI Gradients</a>
+              <a class="dropdown-item" href="/google_fonts">Fonts with Google Fonts</a>
+              <a class="dropdown-item" href="/icons">Icons with Font Awesome</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sinatra">Sinatra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/advice">Advice</a>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>
+    
+    <h1 class="heading">Styling with Bootstrap</h1>
+    
+    <h3 class="subheader">What is Bootstrap?</h3>
+    <p class="info"><strong>Bootstrap</strong> is an open source toolkit for developing with HTML, CSS, and JS. But for our purposes, we will only be using it for our HTML and CSS. Bootstrap allows you to use beautiful CSS that has already been created! It saves you a ton of time and is a great way to make your HTML look clean and polished.</p>
+    
+    <h3 class="subheader">Link Bootstrap in Your HTML File</h3>
+    <p class="info">
+      Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> before all other stylesheets to load Bootstrap's CSS. Some of the features that Bootstrap supplies also requires you to include links to their JavaScript. If you try to use a feature and notice that it is not working, try also including the <code>&lt;script&gt;</code> elements that Bootstrap supplies on their website and make sure that you include these where they tell you to (near the bottom of your HTML file, right before the closing <code>&lt;/body&gt;</code> tag).
+    </p>
+    
+    <p class="info">
+      <strong>CSS</strong><br>
+      <code style="font-family: 'Source Code Pro', monospace;">&lt;<code style="color:#181c6d;">link</code> <code style="color:#1597d8;">rel=</code>"stylesheet" <code style="color:#1597d8;">href=</code>"https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" <code style="color:#1597d8;">integrity=</code>"sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" <code style="color:#1597d8;">crossorigin=</code>"anonymous"&gt;</code>
+      <br><br><strong>JS</strong><br>
+      <code style="font-family: 'Source Code Pro', monospace;">
+        &lt;<code style="color:#181c6d;">script</code> <code style="color:#1597d8;">src=</code>"https://code.jquery.com/jquery-3.3.1.slim.min.js" <code style="color:#1597d8;">integrity=</code>"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" <code style="color:#1597d8;">crossorigin=</code>"anonymous"&gt;&lt;<code style="color:#181c6d;">/script</code>&gt;<br>
+        &lt;<code style="color:#181c6d;">script</code> <code style="color:#1597d8;">src=</code>"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" <code style="color:#1597d8;">integrity=</code>"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" <code style="color:#1597d8;">crossorigin=</code>"anonymous"&gt;&lt;<code style="color:#181c6d;">/script</code>&gt;<br>
+        &lt;<code style="color:#181c6d;">script</code> <code style="color:#1597d8;">src=</code>"https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" <code style="color:#1597d8;">integrity=</code>"sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" <code style="color:#1597d8;">crossorigin=</code>"anonymous"&gt;&lt;<code style="color:#181c6d;">/script</code>&gt;<br>
+      </code>
+    </p>
+    
+    <div style="padding:20px;">
+      <a class="btn btn-outline-primary btn-lg" style="padding:20px;" href="https://getbootstrap.com/docs/4.1/getting-started/introduction/" target="_blank">
+        Full Bootstrap Documentation
+      </a>
+    </div>
+    
+    <p class="info">
+      Once you find some element that you like in the documentation, you can add it into your project by copying and pasting their code. For example, a lot of projects involve buttons... whether these are buttons to link to other pages or submit information, bootstrap has you covered with great styles! Here is a screenshot taken from bootstrap’s documentation on buttons.
+    </p>
+    <img src="/images/boots1.jpeg" alt="Bootstrap 1" style="width:700px;height:400px;padding-left:20px"><br><br>
+    
+    <p class="info">
+      Simply decide which style you want and give buttons you have created in your HTML file the corresponding class name. For example, if I wanted my button to look like the blue one that says “Primary” on it, I would give my button in my HTML file the <strong>class=“btn btn-primary”</strong>. The reason your HTML file knows what “btn btn-primary” means is because you have linked bootstrap to your HTML file in the <code>&lt;head&gt;</code> element (as described earlier).
+    </p>
+    <img src="/images/boots2.jpeg" alt="Bootstrap 2" style="width:900px;height:315px;padding-left:20px"><br><br>
+    
+    <p class="info">
+      <strong>Note: </strong>Bootstrap is very helpful. It has many more features than just styling your buttons. I noticed that a lot of scholars have issues with dealing with the layout of their pages, but bootstrap has a grid/row/column system that makes things a little easier to play around with! Just check it out on their documentation to read more about it. Good luck! <br><br>
+    </p>
+    
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/ui_gradients">Continue to Backgrounds with UI Gradients</a>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

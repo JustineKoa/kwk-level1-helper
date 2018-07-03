@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KWK Level 1 Helper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">KWK Level 1 Helper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/command_line">Command Line</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/ruby">Ruby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/css">CSS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              HTML & CSS Life Hacks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/bootstrap">Styling with Bootstrap</a>
+              <a class="dropdown-item" href="/ui_gradients">Backgrounds with UI Gradients</a>
+              <a class="dropdown-item" href="/google_fonts">Fonts with Google Fonts</a>
+              <a class="dropdown-item" href="/icons">Icons with Font Awesome</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sinatra">Sinatra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/advice">Advice</a>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>
+
+    <h1 class="heading">Ruby</h1>
+    <h3 class="subheader">Ruby Logic, Conditionals, Methods, Coming Soon...</h3>
+    <p class="info">These topics are coming soon! I decided to dedicate most of my time working on sections that I felt would have the most confusion in order to make this website
+    as helpful and useful as possible. That being said, I do plan to include notes on the basics of Ruby in the future to make everything more complete.</p>
+    
+    <h3 class="subheader">Object Orientation</h3>
+    <p class="info"><strong>Introduction</strong><br><mark><strong>Object Oriented Programming, (OOP),</strong></mark> is a paradigm that enables programmers to organize their code in structured ways. It is all about wrapping properties, behaviors, and similar data within predefined structures.
+    <br><br>
+    But what does that even mean??
+    <br><br>
+    More simply, OOP is a programming language model organized around objects. We can define these objects like they are their own data structure (like how Ruby has built in data structures like arrays and hashes) and give them different types of operations (functions) that can be applied to them.
+    <br><br>
+    And if that still didn’t make sense, don’t worry. We’re in this together.
+    </p>
+    
+    <p class="info"><strong>What is a Class?</strong><br>You can think of a <mark><strong>class</strong></mark> like a template. The template describes what information should be filled in when a copy is made. The @ symbol is saying that it is an instance attribute that every copy will have... but note that every copy will have their own copy of that attribute. They do not share the same one. In the case that you would like them to share the same one, we would have to change the scope of the variable to be a class attribute. Feel free to Google more information on that now, but it is not important for understanding the basic concept of classes at this time. 
+    </p>
+    
+    <p class="info">We create an <mark><strong>instance</strong></mark> of the class by calling the <mark><strong>new</strong></mark> method. An instance is a ‘filled out’ copy of the structure that our class defines. 
+    <br><br>
+    We can access the values of our instance attributes by using <mark><strong>getters</strong></mark> and we can edit the values of our instance attributes by using <mark><strong>setters</strong></mark>
+    <br><br>
+    Below is a picture of an example class Dog!
+    </p>
+    
+    <img src="/images/ruby1.jpeg" alt="Dog class example" style="width:600px;height:400px;padding-left:20px">
+    <img src="/images/ruby2.jpeg" alt="Dog class example" style="width:600px;height:400px;padding-left:20px">
+    
+    <br><br>
+    <p class="info">After executing this ruby file, our terminal reads the following:</p>
+    <img src="/images/ruby3.jpeg" alt="Terminal after Dog class" style="width:600px;height:100px;padding-left:20px">
+    <br><br>
+    
+    <p class="info">This is exactly what we expected! Make sure to read the comments in the code for the class Dog to fully understand what’s going on. Also note that if we created another instance of the Dog class (making sure to use new) and named it dog2, its instance attributes would be completely separate from dog1’s instance attributes. They could each have their own name and breed that are unique from one another.</p>
+    
+    <p class="info"><strong>Class Methods and Class Variables</strong><br>
+    If we want every instance of the class Dog to share the same methods or attributes, we must make their scope be the entire class and not just an instance. The syntax for creating <mark><strong>class variables</strong></mark> is @@ and for <mark><strong>class methods</strong></mark> is is self. 
+    <br><br>
+    These signify that they belong to the class itself (of which there is only one) and not instances of the class. The image below shows a different version of the Dog class, this time showing the difference between instance and class methods and attributes/variables. 
+    </p>
+    
+    <img src="/images/ruby4.jpeg" alt="Dog class example" style="width:600px;height:400px;padding-left:20px">
+    <br><br>
+    <p class="info">The output displayed after running this Ruby file is below.</p>
+    <img src="/images/ruby5.jpeg" alt="Terminal after Dog class" style="width:600px;height:100px;padding-left:20px">
+    <br><br>
+    <p class="info">Again, make sure to read the comments in the code to fully understand how everything works and the difference between writing and calling class methods vs. instance methods. There are many labs provided by Learn on Object Orientation and they are super helpful in grasping this concept. Make sure to read the instructions thoroughly, many of it relies on you knowing the vocabulary of instance versus class... which is why I wrote this! I hope that this is of some use to you! This is an important concept not just in Ruby, but in many other programming languages used every day like Java, C++, and Python.</p>
+    
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/html">Continue to HTML</a>
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

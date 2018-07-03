@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KWK Level 1 Helper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">KWK Level 1 Helper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/command_line">Command Line</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ruby">Ruby</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/html">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/css">CSS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              HTML & CSS Life Hacks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/bootstrap">Styling with Bootstrap</a>
+              <a class="dropdown-item" href="/ui_gradients">Backgrounds with UI Gradients</a>
+              <a class="dropdown-item" href="/google_fonts">Fonts with Google Fonts</a>
+              <a class="dropdown-item" href="/icons">Icons with Font Awesome</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sinatra">Sinatra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/advice">Advice</a>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>
+    
+    <h1 class="heading">HTML</h1>
+    <h3 class="subheader">What is HTML?</h3>
+    <p class="info">
+      <mark><strong>HTML</strong></mark>, or <mark><strong>HyperText Markup Language</strong></mark>, is a markup language which describes the structure and organization of web pages. Web browsers, such as Mozilla Firefox, Internet Explorer, and Google Chrome read HTML and use it to display websites. HTML is different from Ruby because it doesn’t have any logic behind the scenes. What you see is what you get! 
+    </p>
+    
+    <h3 class="subheader">HTML Elements</h3>
+    <p class="info">
+      HTML consists of different elements. Most elements use a 'tag' to identify what kind of element they are. This 'tag' wraps around content. Notice in this example that <code>&lt;div&gt;</code> and <code>&lt;/div&gt;</code> wraps the content <strong>Hello, World!</strong>. I noticed that a lot of students would forget to close tags that have been opened. Keep your code organized with the proper indentation to make sure that when you open a tag like <code>&lt;div&gt;</code>, you have it closed somewhere with <code>&lt;/div&gt;</code>. This will make debugging later easier and make your code more readable to others.
+    </p>
+    
+    <img src="/images/html1.jpeg" alt="HTMl example 1" style="width:800px;height:260px;padding-left:20px">
+    <br><br>
+    <p class="info">
+      Elements are for every type of content we experience on web pages, not just for text. For example:
+    </p>
+    <ul>
+      <li>Displaying lists such as this one we are writing right now!</li>
+      <li>Providing the text on the page tab</li>
+      <li>Images/Pictures</li>
+      <li>Sounds</li>
+      <li>And the list goes on!</li>
+    </ul>
+    
+    <p class="info">
+      Elements can also be nested within others! Here is an example of elements being nested in other elements and showing how different elements have different purposes. 
+    </p>
+    <img src="/images/html2.jpeg" alt="HTMl example 2" style="width:800px;height:300px;padding-left:20px">
+    <br><br>
+    <p class="info">
+      <strong>Note:</strong> There are way too many different elements of HTML to memorize what all of them do. Don’t be afraid to use Google to find answers to your specific questions, and check out HTML/CSS life hacks on this website for some help as well!
+    </p>
+    
+    <h3 class="subheader">HTML Organization</h3>
+    <p class="info"><strong>HTML Shell</strong><br>Something that I noticed a lot while teaching is that many students are writing their HTML files in all sorts of crazy ways (improper indentation, forgetting to close tags properly, writing code in incorrect places, etc.) , so when it comes to debugging, it’s a difficult process. It’s much easier to find solutions to issues when your code is organized. To make sure that your HTML code organization is looking great, simply paste this <strong>HTML shell</strong> into your HTML file BEFORE writing any of your HTML code.</p>
+    <img src="/images/html3.jpeg" alt="HTMl example 3" style="width:800px;height:300px;padding-left:20px">
+    <br><br>
+    <p class="info">
+      <strong>Note:</strong> You can get this HTML shell by simply using Google to search for “HTML Shell” and copying and pasting it into your own HTML file. My go-to is here: <a href="http://htmlshell.com/" target="_blank">htmlshell.com</a>
+    </p>
+    
+    <p class="info">
+      You may wonder why you have written HTML code in the past without <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> elements and have had your website still work. This is because they are optional tags. However,  omitting these tags can crash DOM or XML software and produce errors in older browsers (IE9)... so it is not recommended that you omit them.
+    </p>
+    
+    <br>
+    <p class="info">
+      <strong>What is the <code>&lt;head&gt;</code> and what goes in it?</strong><br>
+      The <code>&lt;head&gt;</code> element is a container for metadata (data about data) and is placed between the <code>&lt;html&gt;</code>  tag and the <code>&lt;body&gt;</code> tag. HTML metadata is data about the HTML document. Metadata is not displayed. We will use the <code>&lt;head&gt;</code> element as a place to link our HTML to CSS later on!
+    </p>
+    
+    <p class="info">
+      <strong>What is the <code>&lt;body&gt;</code> and what goes in it?</strong><br>
+      The <code>&lt;body&gt;</code> element contains the HTML document's content. This is what is going to be displayed on screen to the user. This is where most of your HTML code will be!
+    </p>
+    
+    <br>
+    <p class="info">
+      HTML is used to set up the structure of a webpage, while CSS will be used later for styling. Back in the old days, sites were made solely by the use of HTML... which means they were pretty UGLY. Go on to learn about CSS to make your website look great!
+    </p>
+    
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/css">Continue to CSS</a>
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

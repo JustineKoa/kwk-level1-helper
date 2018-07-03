@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KWK Level 1 Helper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">  
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">KWK Level 1 Helper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/command_line">Command Line</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ruby">Ruby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/css">CSS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              HTML & CSS Life Hacks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/bootstrap">Styling with Bootstrap</a>
+              <a class="dropdown-item" href="/ui_gradients">Backgrounds with UI Gradients</a>
+              <a class="dropdown-item" href="/google_fonts">Fonts with Google Fonts</a>
+              <a class="dropdown-item" href="/icons">Icons with Font Awesome</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sinatra">Sinatra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/advice">Advice</a>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>
+    
+    <h1 class="heading">Command Line</h1>
+    
+    <h3 class="subheader">Background on Terminals</h3>
+    <p class="info">Back in the olden days... aka the 80s... computers only had terminals to control them. There was no mouse, fancy icons, or desktop for the user to look at. All you had was a blinking cursor. Graphical User Interfaces (GUIs) were created to make computers more accessible! Developers (like you!) still use the terminal instead of the GUI because you have more control and you have a better understanding of what’s happening under the hood.</p>
+    
+    <h3 class="subheader">Parts of the IDE</h3>
+    <ol>
+      <li><mark><strong>The File Tree</strong></mark> - Lists of folders and files that you have in your IDE</li>
+      <li><mark><strong>The Text Editor</strong></mark> - Where you write code</li>
+      <li><mark><strong>The Terminal</strong></mark> - Where you execute command line instructions</li>
+    </ol>
+    
+    <p class="info">This image is a picture of Cloud9’s IDE! The file tree is on the left, and the terminal is shown below the text editor. Most IDE’s will have it set up like this by default (like Learn’s IDE), but there are different ways you can adjust and orientate them.</p>
+    <img src="/images/CL1.jpeg" alt="Picture of Cloud 9 IDE" style="width:900px;height:600px;padding-left:20px">
+    <br><br>
+    
+    <h3 class="subheader">Commands</h3>
+    
+    <div style="padding-left:20px;padding-right:20px;">
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Command</th>
+          <th scope="col">Function</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">pwd</th>
+          <td>This stands for “print working directory”. It tells you where you currently are in your file tree. Directory basically means folder, and a directory can contain files or other directories.</td>
+        </tr>
+        <tr>
+          <th scope="row">ls</th>
+          <td>This stands for “list”. This will show you what directories or files are within the directory that you are currently on.</td>
+        </tr>
+        <tr>
+          <th scope="row">mkdir</th>
+          <td>This stands for “make directory”. This creates a new directory with the name you provide it.
+          <br><br>
+          Ex: <kbd>mkdir new_directory_name_here</kbd>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">cd</th>
+          <td>This stands for “change directory”. Use this to move to different directories in your file tree. 
+          <br><br>
+          Ex: <kbd>cd directory_changing_into</kbd>  <br> OR <br> <kbd>cd ..</kbd><br>
+          Note: <kbd>cd ..</kbd> will moved you one directory up from where you currently are in the file tree.
+          <br><br> 
+          Wrong: <br>
+          <kbd>cd</kbd> 
+          <br>
+          Note: Just putting in <kbd>cd</kbd> won’t change your directory the way you want it to because you haven’t specified where it should go.
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">touch</th>
+          <td>Use this when you would like to make a new file.
+          <br><br>
+          Ex: <kbd>touch new_file.txt</kbd> 
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">rm</th>
+          <td>Use this when you want to remove/delete a file.
+          <br><br>
+          Ex: <kbd>rm file_i_want_deleted.txt</kbd> 
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">mv</th>
+          <td>Use this to move a file to a new location. It takes in two arguments, the first is what you want to move and the second is where you want to move it to. It can also be used to rename files.
+          <br><br>
+          Ex: <kbd>mv wrong_place/my_file.txt right_place/my_file.txt</kbd> 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <h3 class="subheader">Absolute vs. Relative Paths</h3>
+    
+    <p class="info">Directories only know about what is directly inside of them. To move up the tree, we learned about cd .., but you can also write out the absolute path of different files and directories. An <mark><strong>Absolute path</strong></mark> starts from the root, /. If you were inside an inner directory already, you could write a <mark><strong>Relative path</strong></mark> to a directory or file somewhere inside the one you’re currently in. </p>
+    <p class="info">Take this file tree for example:</p>
+    <img src="/images/CL2.jpeg" alt="Picture of Example File Tree" style="width:550px;height:400px;padding-left:20px">
+    
+    <p class="info"><br>An <mark><strong>absolute path</strong></mark> to <strong>corgi.txt</strong> would be: <kbd>/kwk-lessons/favorite_things/animals/dogs/corgi.txt</kbd> 
+    <br>
+    A <mark><strong>relative path</strong></mark> to <strong>sushi.txt</strong> from favorite_things would be: <kbd>/food/sushi.txt</kbd> 
+    </p>
+    
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/ruby">Continue to Ruby</a>
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

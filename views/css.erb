@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KWK Level 1 Helper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">KWK Level 1 Helper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/command_line">Command Line</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ruby">Ruby</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html">HTML</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/css">CSS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              HTML & CSS Life Hacks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/bootstrap">Styling with Bootstrap</a>
+              <a class="dropdown-item" href="/ui_gradients">Backgrounds with UI Gradients</a>
+              <a class="dropdown-item" href="/google_fonts">Fonts with Google Fonts</a>
+              <a class="dropdown-item" href="/icons">Icons with Font Awesome</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sinatra">Sinatra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/advice">Advice</a>
+          </li> 
+        </ul>
+      </div>
+      
+    </nav>
+
+    <h1 class="heading">CSS</h1>
+    <h3 class="subheader">What is CSS?</h3>
+    <p class="info"><mark><strong>CSS</strong></mark>, or <mark><strong>Cascading Style Sheets</strong></mark>, is its own language that defines how HTML is displayed on a page. It has its own syntax separate from HTML. CSS saves a lot of work. It can control the layout of multiple web pages all at once, which will be talked about below!</p>
+    
+    <h3 class="subheader">Applying CSS to HTML</h3>
+    <p class="info">There are actually 3 different ways to apply CSS to HTML code.</p>
+    <p class="info"><strong>1. INLINE - CSS rules can be written directly inside HTML tags.</strong></p>
+    <img src="/images/css1.jpeg" alt="CSS example 1" style="width:990px;height:150px;padding-left:20px">
+    
+    <br><br>
+    <p class="info"><strong>2. INTERNAL - CSS can be written separately, but still in the same HTML file.</strong>This is accomplished by using the <code>&lt;style&gt;</code> element inside your <code>&lt;head&gt;</code> element of the HTML file. This code turns all of the <code>&lt;p&gt;</code> tags red!</p>
+    <img src="/images/css2.jpeg" alt="CSS example 2" style="width:700px;height:400px;padding-left:20px"><br><br>
+    <p class="info"><strong>Notice: </strong><code>&lt;style&gt;</code> is inside <code>&lt;head&gt;</code>, and the <code>&lt;p&gt;</code> tags that we want displayed are inside <code>&lt;body&gt;</code>.</p>
+    
+    <p class="info"><strong>3. EXTERNAL - CSS can be written in a separate .css file and then be linked to the HTML file.</strong> This is the most common way people use CSS because of its organization and convenience. This way, multiple HTML files can be linked to the same CSS file; this allows you to not have to duplicate code when styling different pages the same way.</p>
+    <p class="info"><strong>Note: </strong>There are thousands of CSS properties, so it is impossible to memorise them all. Once again, Google is your bestie! Also be sure to reference the HTML and CSS life hacks page!</p>
+    
+    <h3 class="subheader">Linking an External Stylesheet</h3>
+    <p class="info">A common issue I noticed from students is that they write beautiful CSS code inside a separate CSS file, and wonder why none of it gets applied to their HTML. This is because we must give our HTML some way of knowing where the CSS is. Using <code>&lt;link&gt;</code> element in the <code>&lt;head&gt;</code> of our HTML file, we are able to link our HTML to an external CSS file. Make sure that the href attribute is pointing to the location of your CSS file.</p>
+    <img src="/images/css3.jpeg" alt="CSS example 3" style="width:700px;height:400px;padding-left:20px"><br><br>
+    <p class="info">In the example above, href is pointing to a CSS file named styles.css in a Public folder.</p>
+    
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/bootstrap">Continue to HTML & CSS Life Hacks</a>
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
