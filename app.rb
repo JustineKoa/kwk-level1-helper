@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative 'config/environment'
 
 get '/' do
     erb :index
