@@ -21,6 +21,10 @@ get '/rmethods' do
     erb :rmethods
 end
 
+get '/rloops' do
+    erb :rloops
+end
+
 get '/roo' do
     erb :roo
 end

@@ -66,8 +66,95 @@
       </div>
     </nav>
     <h1 class="heading">Ruby</h1>
-    <h3 class="subheader">Methods Under Construction</h3>
+    <h3 class="subheader">Methods</h3>
+    <p class="info">
+      <strong>What are methods?</strong><br>
+      We use <strong>methods</strong> in programs to remove the need for duplicate code. With methods, we’re able to put a sequence of commands inside of a method. We give each method a name and use it when we want to call that method. Each time we call a method, the code inside it will be run. Here is an example of a basic method:
+    </p>
     
+    <img src="/images/rmethods1.jpeg" alt="Picture Ruby Methods 1" style="width:550px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <strong>Note: </strong>Defining a method is different from running a method. If we want to run it, we need to call it by the name we gave it. Look the example code that I provided and notice where I define the method and where I call it. If I didn’t include the line where I call the method, running my file won’t produce any output.
+      <br><br>
+      Now you know the basics of methods! Of course, there is more to come with methods because they can be expanded to be more complex and therefore more useful!
+      <br><br>
+      <strong>Scope</strong><br>
+      Let’s say we want our method to become more customizable. That means that we would want to use variables right? But what happens when we try to do this...
+    </p>
+    
+    <img src="/images/rmethods2.jpeg" alt="Picture Ruby Methods 2" style="width:550px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      This gives us an error because of an important concept known as <strong>scope</strong>. The variables have a specific place where they exist, and this place is called their “scope”. A method only has access to information that is defined inside of it. 
+    </p>
+    
+    <img src="/images/rmethods3.jpeg" alt="Picture Ruby Methods 3" style="width:550px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      So this example now runs perfectly fine.. But now we have a new issue. What if I don’t want those variables to always have the same value? The current way the method is functioning has it outputting one specific output every single time. But is there a way for me to create my method so that it can output different things based on the values I give the variables?? Well of course!!! That’s what I’ve been leading up to!!
+      <br><br>
+      <strong>Arguments</strong><br>
+      <strong>Note:</strong> There is a difference between <strong>arguments</strong> and <strong>parameters</strong>, but the difference is not that important for the scope of this course. Feel free to look it up on Google yourself and learn it, but it’s not a key concept for what we’re learning here. 
+      <br>
+      We want to be able to pass information into the method and have that information be assigned to variables that can then be used inside the method (because it is in the method’s scope!). Let’s look at this next example and examine the error. 
+    </p>
+    
+    <img src="/images/rmethods4.jpeg" alt="Picture Ruby Methods 4" style="width:550px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      This example gave us an error called the “ArgumentError: wrong number of arguments”. We tried to give the method 3 arguments, but it didn’t expect any. Arguments allow us to pass data into a method. In this updated example, we will make it so that our method expects these arguments. Arguments go in parenthesis and you can name them whatever you want... but try to name them something that makes sense. Stray away from naming your variables names like x and y, because that doesn’t tell us anything about what they are going to be used for. Appropriate names makes reading your code easier, not only for yourself, but for other people as well! The name that you use to define the argument will be the local variable inside the method that the piece of data will be referenced as. 
+    </p>
+    
+    <img src="/images/rmethods5.jpeg" alt="Picture Ruby Methods 5" style="width:550px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      You can define multiple arguments with a comma in the method signature. You don’t have to send literal data, like a literal String as a value for an argument. You can send references to this data (aka variables!). 
+    </p>
+    
+    <img src="/images/rmethods6.jpeg" alt="Picture Ruby Methods 6" style="width:550px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      Now that you have these arguments defined in your method signature, every time you call this method, you need to provide the correct number of arguments. If you don’t, you will also get an argument error again! But there is a way to get around this in some cases. What if we wanted to say that by default, fav_artist should be “Taylor Swift”? We have something called default arguments! If you want an argument to have a default value, you can assign the default when you declare the argument in the method signature. 
+    </p>
+    
+    <img src="/images/rmethods7.jpeg" alt="Picture Ruby Methods 7" style="width:550px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br><strong><code>puts</code></strong> versus <strong><code>return</code></strong><br>
+      Something that I noticed in my time as an Instructor Assistant is that it is not really mentioned what the key difference between these two built in commands are. Methods in Ruby always return something, whether it be nil or not. When we output things to the console for the user to see, we aren’t really returning anything... we’re just printing out a value. When we are in irb and we try to <strong><code>puts</code></strong> something, it shows a return value of nil (which basically means none or nothing). However, if we <strong><code>return</code></strong> a value in a method, it doesn’t get outputted to the console, but we can use it later on if we store it in a variable or pass it into another method. 
+    </p>
+    
+    <img src="/images/rmethods8.jpeg" alt="Picture Ruby Methods 8" style="width:550px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      In this example, we see that we created two methods... one using puts and returning nil and one returning a value. We call both of these methods in lines 9 and 11, but when we run this file, we see the output “Corgi with puts”.  What happened to “Corgi with return”? The “Corgi with return” did not get outputted because the value was only returned. But the power of return is now we can use the string we got from that method and use it in different ways. To do this, we need to save it into a variable first... let’s just name it temp for now.
+    </p>
+    
+    <img src="/images/rmethods9.jpeg" alt="Picture Ruby Methods 9" style="width:550px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      We were able to take the returned string “Corgi with return”, and use it later on in our program! We wouldn’t be able to do this with our simple_method_with_puts because it doesn’t return a string. Let’s try it...
+    </p>
+    
+    <img src="/images/rmethods10.jpeg" alt="Picture Ruby Methods 10" style="width:550px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      Instead of outputting “Here it is Corgi with puts!!”, it only outputted “Here it is !!”. This is because the return value of simple_method_with_puts is nil, and we stored nil as the value for our variable temp. When we used interpolation to print out a newly built string with our variable temp, temp was empty. 
+      <br><br>
+      I hope that cleared up a few things on a difference between <strong><code>puts</code></strong> and <strong><code>return</code></strong>! If you noticed, we did not use the word <strong><code>return</code></strong> in our code. This is because Ruby automatically will return the last line of code in your method if you do not specifically use the keyword <strong><code>return</code></strong> anywhere else in the method’s code. Since we were practicing with methods that were only one line, we omitted the keyword. When your methods get more complex with loops and conditionals, you may want to return on a line that is not the last one. That is when you’re going to want to use the keyword. 
+    </p>
+    
+    <br><br>
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/rlogic">Continue to Ruby Logic and Conditionals</a>
     
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
