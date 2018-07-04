@@ -25,6 +25,10 @@ get '/rloops' do
     erb :rloops
 end
 
+get '/rarrays' do
+    erb :rarrays
+end
+
 get '/roo' do
     erb :roo
 end

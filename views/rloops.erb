@@ -31,7 +31,7 @@
               <a class="dropdown-item" href="/rintro">Intro to Ruby</a>
               <a class="dropdown-item" href="/rmethods">Ruby Methods</a>
               <a class="dropdown-item" href="/rlogic">Logic and Conditionals</a>
-              <a class="dropdown-item" href="#">Loops - Coming Soon</a>
+              <a class="dropdown-item" href="/rloops">Loops</a>
               <a class="dropdown-item" href="#">Arrays and Iteration - Coming Soon</a>
               <a class="dropdown-item" href="#">Hashes - Coming Soon</a>
               <a class="dropdown-item" href="#">Nested Data and Iteration - Coming Soon</a>
@@ -67,8 +67,62 @@
     </nav>
     
     <h1 class="heading">Ruby</h1>
-    <h3 class="subheader">Loops - Under Construction</h3>
+    <h3 class="subheader">Loops</h3>
+    <p class="info">
+        <strong>What is a loop?</strong><br>
+        Remember when we were writing methods? Methods allowed us to put a series of code in one place to be called whenever we want. But what if we realized that we wanted it to repeat multiple times? Instead of calling the method again and again, because that would be redundant, we can use something called <strong>loops</strong> to repeat code without having to rewrite it.
+        <br><br>
+        Take this basic loop for example.
+    </p>
     
+    <img src="/images/rloops1.jpeg" alt="Picture Ruby Loops 1" style="width:600px;height:200px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        It will continue to run over and over without end, because we never gave it a <strong><code>break</code></strong>. If you ever run a loop in irb and find out that it is infinite and won’t stop running, click <strong>ctrl + c</strong> to terminate the loop and <strong>exit</strong> to get out of irb.
+        <br><br>
+        <strong><code>break</code></strong><br>
+        Ruby’s <strong><code>break</code></strong> statement allows us to stop a loop immediately. Whenever <strong><code>break</code></strong> is read by the computer, the loop is immediately terminated and code continues to be read outside of the loop.
+    </p>
+    
+    <img src="/images/rloops2.jpeg" alt="Picture Ruby Loops 2" style="width:660px;height:320px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        Statements inside of the loop after the <strong><code>break</code></strong> don’t get run, but any code outside of the loop does get run because that is where the code continues to get executed.
+        <br><br>
+        <strong>Loops with Logic and Conditionals</strong><br>
+        We can combine what we learned about logic and conditionals to make our loops end given certain scenarios. For example, if we want our loop to execute 10 times, we can add a counter to our loop.  It is important that we create the counter variable outside of the loop, and remember to increment it as each looping occurs.
+    </p>
+    
+    <img src="/images/rloops3.jpeg" alt="Picture Ruby Loops 3" style="width:600px;height:400px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        <strong><code>while</code> Loops</strong><br>
+        A <strong><code>while</code></strong> loop is basically saying “while some condition is true, do this thing”. We can use the same loop example above and convert it into a <strong><code>while</code></strong> loop.
+    </p>
+    
+    <img src="/images/rloops4.jpeg" alt="Picture Ruby Loops 4" style="width:600px;height:400px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        <strong><code>until</code> Loops</strong><br>
+        A <strong><code>until</code></strong> loop is basically saying “until some condition is met, do this thing”. We can again use the same loop example above and write it using <strong><code>until</code></strong>.
+    </p>
+    
+    <img src="/images/rloops5.jpeg" alt="Picture Ruby Loops 5" style="width:600px;height:400px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        <strong>Note:</strong> don’t forget to end your loops with the keyword <kbd><strong>end</strong></kbd>!
+        <br><br>
+        Now you know how to write loops in different ways! With practice, you’ll find that certain kinds of loops will make more sense to use in different scenarios.
+    </p>
+    
+    <br><br>
+    
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/rarrays">Continue to Arrays and Iteration</a>
     
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
