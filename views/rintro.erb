@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KWK Level 1 Helper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">KWK Level 1 Helper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/command_line">Command Line</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Ruby
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/rintro">Intro to Ruby</a>
+              <a class="dropdown-item" href="/rmethods">Ruby Methods</a>
+              <a class="dropdown-item" href="/rlogic">Logic and Conditionals</a>
+              <a class="dropdown-item" href="#">Loops - Coming Soon</a>
+              <a class="dropdown-item" href="#">Arrays and Iteration - Coming Soon</a>
+              <a class="dropdown-item" href="#">Hashes - Coming Soon</a>
+              <a class="dropdown-item" href="#">Nested Data and Iteration - Coming Soon</a>
+              <a class="dropdown-item" href="#">CLI Apps - Coming Soon</a>
+              <a class="dropdown-item" href="/roo">Object Orientation</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/css">CSS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              HTML & CSS Life Hacks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/bootstrap">Styling with Bootstrap</a>
+              <a class="dropdown-item" href="/ui_gradients">Backgrounds with UI Gradients</a>
+              <a class="dropdown-item" href="/google_fonts">Fonts with Google Fonts</a>
+              <a class="dropdown-item" href="/icons">Icons with Font Awesome</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sinatra">Sinatra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/advice">Advice</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <h1 class="heading">Ruby</h1>
+    <h3 class="subheader">Introduction to Ruby</h3>
+    <p class="info">
+      <strong>What is Ruby?</strong><br>
+      <strong>Ruby</strong>  is a backend programming language that is typically used to build web applications. Some popular things that you may have heard of that were built with Ruby are AirBnb, Twitter, Groupon, SoundCloud, and more. Ruby is a backend language that will make us able to create a web application (versus a static site that doesn’t adjust different to user input). I talk more about static versus dynamic sites on the page on Sinatra! But let’s not get too ahead of ourselves here... let’s start with the basics.
+    </p>
+    
+    <p class="info">
+      <strong>Your First Program: Hello, World!</strong><br>
+      I’m assuming you did this lab in Learn with class, so we’re just going to break it down and analyze what’s going on here. If you remember what we learned about the command line in the previous section, you will notice that we write our code in the text editor! More specifically, we’re writing our code in a ruby file. Ruby files are files with the extension <strong>.rb</strong>! In this lab, our ruby file is named <strong>hello_world.rb</strong> and we created it using <kbd>touch hello_world.rb</kbd>. If you notice that you’re typing code in the text editor and it doesn’t appear to be color coded like in my examples, then you’re probably writing in a normal text file and not a ruby file. Don’t worry, I’ve seen this happen to beginners a lot!
+      <br>
+      When we write code, you can think of it as writing instructions to the computer. Remember, computers aren’t as smart as humans... they only do what we tell them to do! If we make an error in our code, the computer gets confused and can’t reason with it like a human would.
+      <br>
+      When you type <code>puts “Hello World”</code> in your <strong>hello_word.rb</strong>, you are writing an instruction for the computer to read when you run your ruby file. We wrote the code, now it’s time to run our first program! Type in <kbd>ruby hello_world.rb</kbd> in your terminal and you’re good to go!
+    </p>
+    
+    <img src="/images/rintro1.jpeg" alt="Picture Ruby Intro 1" style="width:500px;height:200px;padding-left:20px">
+    
+    <p class="info">
+      <strong>Note: </strong> Run ruby files by typing <kbd>ruby file_name_here.rb</kbd> in the terminal
+      <br><br>
+      <strong>Learn's Failure Messages vs. Error Messages</strong><br>
+      Now, you probably typed <kbd>learn</kbd> in your terminal and saw your first failure message. Something that I want to make clear is that there is a difference between Learn failure messages and normal error messages. The curriculum writes tests for your code to check that you’re completing the labs correctly; these checks are written in spec files that you can actually click on and explore. Don’t worry if the code in these spec files don’t make any sense to you, it’s not that important for the scope of this course for you to understand them fully at this point. What’s important to know is that when you run the <kbd>learn</kbd> command in your terminal, you’re running these spec files to check your code’s output against what the spec files are checking for. When you get failure messages, it means your code isn’t producing the exact output that Learn’s curriculum wants you to. However, this is different from a normal error message because your code could run perfectly and just not pass the tests for a different reasons (like forgetting a period or capitalizing a letter they didn’t want capitalized). You can get error messages for incorrect syntax in your code or trying to do something illegal, like dividing a number by zero. To check if your code runs and has correct syntax, you can always go back to running your code in the terminal using <kbd>ruby file_name_here.rb</kbd>. The <kbd>learn</kbd> command is something only being used in the scope of this course and will not mean anything to the terminal afterwards. However, commands that we learned in the previous section like <kbd>ls</kbd>, <kbd>cd</kbd>, and <kbd>mkdir</kbd> will still be applicable as Linux commands. 
+      <br>
+      That being said, it’s still great practice to read Learn’s failure messages because it allows you to practice debugging!
+      <br><br>
+      <strong>puts versus return (will be revisited)</strong><br>
+      I wanted to make this distinction early on because it is a huge recurring misunderstanding, and I totally understand why. <strong>puts</strong> is an action built into Ruby that tells the computer to print out your piece of data to the screen. It’s telling the computer, show this information to my user. Later on we will learn and start using another action built into Ruby and many other languages called <strong>return</strong>. These often get mixed up to beginner programmers, and it definitely confused me for a bit when I was first learning how to code. For now, just know that they are different. <strong>puts</strong> returns nothing (known as nil) and <strong>return</strong> alone outputs nothing on the screen. We will make a better distinction later on.
+      <br><br>
+      <strong>irb (Interative Ruby)</strong><br>
+      <strong>irb</strong> irb can be accessed by typing in <kbd>irb</kbd> in your terminal. This is a Ruby command prompt where you can execute valid Ruby. If you ever want to exit it, just enter quit. You probably played around in class with typing different expressions in there! You can test out different code and see the output immediately here; just know that nothing here gets saved. If you want code you write to be saved, you must keep it in a ruby file and type it in the text editor.
+      <br><br>
+      <strong>Data Types and Conversions</strong><br>
+      In Ruby, the first data types that you will learn about are strings, integers, and floats. You can think of floats to be like decimals and integers to be like whole numbers.
+      <br>
+      Something important to remember about strings is that they are always surrounded by quotation marks! “I am a string!” is a valid string!
+      <br>
+      Math in Ruby can be a bit confusing to see at first. You can open up your irb and try different math to see what happens. You might not see what you’d expect. Say we do.. 100/3? The output is 33. But that’s not what you’d expect huh? That’s because math in Ruby using integers will produce integers, so it rounds your answer for you. In order to get decimals, we need to use at least one float in the expression. So for our 100/3 example, we could do 100/3.0 or 100.0/3 or 100.0/3.0! This is a key concept that you should remember whenever you’re trying to solve problems pertaining to math! It could completely change your answer into something crazy.
+      <br><br>
+      We cannot add different data types together, like strings and integers. But integers and floats work!
+    </p>
+    
+    <img src="/images/rintro2.jpeg" alt="Picture Ruby Intro 2" style="width:500px;height:350px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      <strong>“22” + 30</strong> would give an error because they are different data types. <br> 
+      However, there are ways to get around this by using methods <strong>to_i</strong>, <strong>to_f</strong>, and <strong>to_s</strong>! <br>
+      <strong>“22”.to_i + 30</strong> would work fine! <br><br>
+      You’re probably wondering what a <strong>method</strong> is! Think of it like a function... like f(x)=x+1! In this example function, we put in some value for x and get out a result. For our method <strong>to_i</strong>, we put in a value “22”, and get out 22 as our result.
+      <br><br>
+      <strong>Variables</strong><br>
+      <strong>Variables</strong> are used in programming to store pieces of data, and can store all types of data. Well, we just learned about different data types, so now we can save them into variables!
+      <br><br>
+      Notice that in all the examples of variables, the variable name always comes first! The name of the variable must come before the variable’s value. Also keep in mind that variable names contain all lowercase letters and cannot be keywords. An example of a keyword would be <strong>puts</strong> because Ruby knows <strong>puts</strong> is a built in action, you cannot use it as a variable name.
+    </p>
+    
+    <img src="/images/rintro3.jpeg" alt="Picture Ruby Intro 3" style="width:320px;height:180px;padding-left:20px">
+    
+    <p class="info">
+      <strong>Note: </strong>Follow this format always: var_name = put_var_value_here
+      <br><br>
+      <strong>Interpolation</strong><br>
+      <strong>Interpolation </strong>sounds like a funny and complex word, but trust me, it’s not difficult! It’s a simpler way to build strings with variables. Interpolation is denoted with the hashtag and curly braces. It will output the value stored in the variable name that we put between the curly braces.
+    </p>
+    
+    <img src="/images/rintro4.jpeg" alt="Picture Ruby Intro 4" style="width:500px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br><br>
+      <strong>gets</strong><br>
+      <strong>gets</strong> is another built in method that Ruby knows about and it is used to take in user input. We already know that <strong>puts</strong> outputs to the console for the user to see, but what if we want the user to have a way to respond to us? We use <strong>gets</strong> when we want to prompt the user to provide input. Now that we know about variables, we have a way to store the user input that we obtain so we can use it later on in our program for anything! <br><br>
+      <strong>gets.chomp or gets.strip</strong><br>
+      <strong>gets.chomp</strong> and <strong>gets.strip</strong> are a bit different, but it’s not that important for you to know the distinction right now. If you’re curious, you could always Google it, but for now you just need to know that it removes the newline character at the end of the string. <strong>gets</strong> alone takes in user input as a string including the newline character (giving as the enter/return key on the keyboard), but <strong>gets.strip</strong> and <strong>gets.chomp</strong> removes it so when we use the user input later on, it won’t have a weird newline. You can see this difference in my example.
+    </p>
+    
+    <img src="/images/rintro5.jpeg" alt="Picture Ruby Intro 5" style="width:500px;height:300px;padding-left:20px">
+    <img src="/images/rintro6.jpeg" alt="Picture Ruby Intro 6" style="width:500px;height:300px;padding-left:20px">
+    
+    <p class="info">
+      <br><br>
+      Putting it all together, we can write a small program that asks the user a question using <strong>puts</strong>, prompting them for an answer using <strong>gets</strong>, storing it into a <strong>variable</strong>, and using <strong>puts</strong> to output it back to them in a string we built using <strong>interpolation</strong>!
+    </p>
+    
+    <img src="/images/rintro7.jpeg" alt="Picture Ruby Intro 7" style="width:500px;height:300px;padding-left:20px">
+    <br><br>
+    
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/rmethods">Continue to Ruby Methods</a>
+    
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

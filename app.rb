@@ -9,8 +9,20 @@ get '/command_line' do
     erb :command_line
 end
 
-get '/ruby' do
-    erb :ruby
+get '/rintro' do
+    erb :rintro
+end
+
+get '/rlogic' do
+    erb :rlogic
+end
+
+get '/rmethods' do
+    erb :rmethods
+end
+
+get '/roo' do
+    erb :roo
 end
 
 get '/html' do
