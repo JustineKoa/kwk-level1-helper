@@ -29,6 +29,10 @@ get '/rarrays' do
     erb :rarrays
 end
 
+get '/rhashes' do
+    erb :rhashes
+end
+
 get '/roo' do
     erb :roo
 end

@@ -32,8 +32,8 @@
               <a class="dropdown-item" href="/rmethods">Ruby Methods</a>
               <a class="dropdown-item" href="/rlogic">Logic and Conditionals</a>
               <a class="dropdown-item" href="/rloops">Loops</a>
-              <a class="dropdown-item" href="#">Arrays and Iteration - Coming Soon</a>
-              <a class="dropdown-item" href="#">Hashes - Coming Soon</a>
+              <a class="dropdown-item" href="/rarrays">Arrays and Iteration</a>
+              <a class="dropdown-item" href="/rhashes">Hashes - Coming Soon</a>
               <a class="dropdown-item" href="#">Nested Data and Iteration - Coming Soon</a>
               <a class="dropdown-item" href="#">CLI Apps - Coming Soon</a>
               <a class="dropdown-item" href="/roo">Object Orientation</a>
@@ -67,10 +67,99 @@
     </nav>
     
     <h1 class="heading">Ruby</h1>
-    <h3 class="subheader">Arrays and Iteration - Under Construction</h3>
+    <h3 class="subheader">Intro to Arrays</h3>
     
+    <p class="info">
+        <strong>The Need for Arrays</strong><br>
+        We have already learned previous about <strong>variables</strong> being a way to store data, but sometimes they are deficient. What if we want to store a large amount of data that we want grouped together? For example, it wouldn’t make sense to make variables for every individual dog we own.
+    </p>
     
+    <img src="/images/rarray1.jpeg" alt="Picture Ruby Arrays 1" style="width:350px;height:100px;padding-left:20px">
     
+    <p class="info">
+        <br>
+        Imagine we decided to adopt another dog. Working with the current code, we would have to create a new variable and update the source code: <strong><code>new_dog = “Phoebe”</code></strong>
+        <br><br>
+        We would be creating unnecessary work for ourselves by making us responsible for remembering all of the variables scattered around our program. What would be more ideal if one variable that would hold this collection of our dogs. That’s where <strong>arrays</strong> come in!
+        <br><br>
+        <strong>Arrays</strong><br>
+        An <strong>array</strong>  is a <strong>collection of data</strong> stored in one place and can be referenced by one variable name. They maybe are the most used data structure by programmers. They can be used to hold groups of similar data. You can think of an array to be like a list!
+        <br><br>
+        <strong>Creating an Array</strong><br>
+        Like we did in the past for other data types (strings, integers, floats), we assign arrays to a variable name. We initialize, or create, an empty array using square brackets. We can also initialize an array with elements inside already. I will demonstrate both in the following example:
+    </p>
+    
+    <img src="/images/rarray2.jpeg" alt="Picture Ruby Arrays 2" style="width:650px;height:400px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        We can <strong><code>puts</code></strong> an array like we did for other variables and data types we have made in the past. When we use <strong><code>puts</code></strong>, it prints out each element in the array on a newline.
+        <br><br>
+        Now that we have created an array, we can learn about different things you can do with it. We are able to add elements, remove elements, access elements, and loop over elements.
+        <br><br>
+        <strong>Accessing Elements in an Array</strong><br>
+        One way we are able to access elements in an array is called <strong>accessing by index</strong>. This allows us to get a specific element out of an array. If we want to get the first element of an array, we must use [0] <strong>not</strong> [1]. The first element in an array is at the index zero. This is an important concept to remember because it applies to all programming languages. When accessing indexes, we always start with 0.
+        <br><br>
+        Ruby arrays also have a few methods that make it easy to do common operations when accessing elements. <strong><code>first</code></strong> returns the first element/element at index 0 and <strong><code>last</code></strong> returns the last element.
+    </p>
+    
+    <img src="/images/rarray3.jpeg" alt="Picture Ruby Arrays 3" style="width:650px;height:400px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        <strong>Adding Elements to an Array</strong><br>
+        There is an array method called <strong><code>push</code></strong> that allows us to add elements to the end of an array. It takes in an argument (or many separated by commas), and appends them to the end of the array. We can also use a shorthand syntax for <strong><code>push</code></strong>, by ‘shoveling’ into the array using <strong><code>&lt;&lt;</code></strong>.
+    </p>
+    
+    <img src="/images/rarray4.jpeg" alt="Picture Ruby Arrays 4" style="width:650px;height:400px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        <strong>Editing Elements in an Array</strong><br>
+        We can also edit elements in an array by combining what we know about accessing elements in an array and variable assignments.
+    </p>
+    
+    <img src="/images/rarray5.jpeg" alt="Picture Ruby Arrays 5" style="width:650px;height:400px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        <strong>Array Size</strong><br>
+        Being able to determine the size of an array is great information to have! The size of the array is just the amount of elements in the array. We can access the size by using the array method <strong><code>size</code></strong>. The <strong><code>size</code></strong> method can be used to tell us when to stop when we are “looping” or “iterating” over elements in the array.
+    </p>
+    
+    <img src="/images/rarray6.jpeg" alt="Picture Ruby Arrays 6" style="width:650px;height:400px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        <strong>Note:</strong> the index of an array starts at 0, so the last index of an array is not the same number as the size of an array. It would be the size of the array - 1.
+    </p>
+    
+    <h3 class="subheader">Array Iteration</h3>
+    <p class="info">
+        Earlier, we did examples of iterating over an array using the <strong><code>size</code></strong> method as a breakpoint. Turns out, there is actually a more efficient way to iterate over arrays when we know we want to access every single element.
+        <br><br>
+        <strong>Array <code>.each</code></strong><br>
+        Things are about to get pretty complex, so it’s okay if you don’t catch on right away. The syntax for using the <strong><code>each</code></strong> method is about to look very different from any syntax that you’ve seen before. Try to think of as a special kind of loop for arrays. I will try to break this down as best I can.
+    </p>
+    
+    <img src="/images/rarray7.jpeg" alt="Picture Ruby Arrays 7" style="width:650px;height:400px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        Notice where we put the name of the array that we are using; this goes right before the <strong><code>.each</code></strong> because it is the array that we are trying to loop through. After this,it is followed by a keyword <strong><code>do</code></strong> and double pipes surrounding a variable name. It doesn’t really matter what we put as the variable name, but as I’ve mentioned before, try to always name your variables things that are relevant to their function and the data they are representing. The name you decide to give your variable is the name we can use to reference the data inside the each loop. This variable’s scope is the each loop, meaning it is not going to mean anything outside of the loop.
+        <br><br>
+        I highly recommend you do the labs that involve arrays and looping through them because it is a key concept that you’re going to need to understand to later solve more complex problems. That being said, I’ll provide a few more things you can do when iterating through an array. I won’t get too detailed on these explanations because I want you to do some investigating and figure out why they work on your own. If you’re seriously stuck, Google is your best friend.
+    </p>
+    
+    <img src="/images/rarray8.jpeg" alt="Picture Ruby Arrays 8" style="width:650px;height:400px;padding-left:20px">
+    <br><br>
+    <img src="/images/rarray9.jpeg" alt="Picture Ruby Arrays 9" style="width:650px;height:400px;padding-left:20px">
+    <br><br>
+    <img src="/images/rarray10.jpeg" alt="Picture Ruby Arrays 10" style="width:650px;height:400px;padding-left:20px">
+    <br><br>
+    
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/rhashes">Continue to Ruby Hashes</a>
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
