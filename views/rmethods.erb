@@ -33,9 +33,9 @@
               <a class="dropdown-item" href="/rlogic">Logic and Conditionals</a>
               <a class="dropdown-item" href="/rloops">Loops</a>
               <a class="dropdown-item" href="/rarrays">Arrays and Iteration</a>
-              <a class="dropdown-item" href="/rhashes">Hashes - Coming Soon</a>
-              <a class="dropdown-item" href="#">Nested Data and Iteration - Coming Soon</a>
-              <a class="dropdown-item" href="#">CLI Apps - Coming Soon</a>
+              <a class="dropdown-item" href="/rhashes">Hashes and Iteration</a>
+              <a class="dropdown-item" href="/rnested">Nested Data and Iteration</a>
+              <a class="dropdown-item" href="/rcli">CLI Apps</a>
               <a class="dropdown-item" href="/roo">Object Orientation</a>
             </div>
           </li>
@@ -69,12 +69,13 @@
     <h3 class="subheader">Methods</h3>
     <p class="info">
       <strong>What are methods?</strong><br>
-      We use <strong>methods</strong> in programs to remove the need for duplicate code. With methods, we’re able to put a sequence of commands inside of a method. We give each method a name and use it when we want to call that method. Each time we call a method, the code inside it will be run. Here is an example of a basic method:
+      We use <strong><mark>methods</mark></strong> in programs to remove the need for duplicate code. With methods, we’re able to put a sequence of commands inside of a method. We give each method a name and use it when we want to call that method. Each time we call a method, the code inside it will be run. Here is an example of a basic method:
     </p>
     
     <img src="/images/rmethods1.jpeg" alt="Picture Ruby Methods 1" style="width:550px;height:300px;padding-left:20px">
     
     <p class="info">
+      <br>
       <strong>Note: </strong>Defining a method is different from running a method. If we want to run it, we need to call it by the name we gave it. Look the example code that I provided and notice where I define the method and where I call it. If I didn’t include the line where I call the method, running my file won’t produce any output.
       <br><br>
       Now you know the basics of methods! Of course, there is more to come with methods because they can be expanded to be more complex and therefore more useful!
@@ -87,7 +88,7 @@
     
     <p class="info">
       <br>
-      This gives us an error because of an important concept known as <strong>scope</strong>. The variables have a specific place where they exist, and this place is called their “scope”. A method only has access to information that is defined inside of it. 
+      This gives us an error because of an important concept known as <strong><mark>scope</mark></strong>. The variables have a specific place where they exist, and this place is called their “scope”. A method only has access to information that is defined inside of it. 
     </p>
     
     <img src="/images/rmethods3.jpeg" alt="Picture Ruby Methods 3" style="width:550px;height:300px;padding-left:20px">
@@ -97,7 +98,7 @@
       So this example now runs perfectly fine.. But now we have a new issue. What if I don’t want those variables to always have the same value? The current way the method is functioning has it outputting one specific output every single time. But is there a way for me to create my method so that it can output different things based on the values I give the variables?? Well of course!!! That’s what I’ve been leading up to!!
       <br><br>
       <strong>Arguments</strong><br>
-      <strong>Note:</strong> There is a difference between <strong>arguments</strong> and <strong>parameters</strong>, but the difference is not that important for the scope of this course. Feel free to look it up on Google yourself and learn it, but it’s not a key concept for what we’re learning here. 
+      <strong>Note:</strong> There is a difference between <strong><mark>arguments</mark></strong> and <strong><mark>parameters</mark></strong>, but the difference is not that important for the scope of this course. Feel free to look it up on Google yourself and learn it, but it’s not a key concept for what we’re learning here. 
       <br>
       We want to be able to pass information into the method and have that information be assigned to variables that can then be used inside the method (because it is in the method’s scope!). Let’s look at this next example and examine the error. 
     </p>

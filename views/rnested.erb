@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KWK Level 1 Helper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">KWK Level 1 Helper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/command_line">Command Line</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Ruby
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/rintro">Intro to Ruby</a>
+              <a class="dropdown-item" href="/rmethods">Ruby Methods</a>
+              <a class="dropdown-item" href="/rlogic">Logic and Conditionals</a>
+              <a class="dropdown-item" href="/rloops">Loops</a>
+              <a class="dropdown-item" href="/rarrays">Arrays and Iteration</a>
+              <a class="dropdown-item" href="/rhashes">Hashes and Iteration</a>
+              <a class="dropdown-item" href="/rnested">Nested Data and Iteration</a>
+              <a class="dropdown-item" href="/rcli">CLI Apps</a>
+              <a class="dropdown-item" href="/roo">Object Orientation</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html">HTML</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/css">CSS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              HTML & CSS Life Hacks
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/bootstrap">Styling with Bootstrap</a>
+              <a class="dropdown-item" href="/ui_gradients">Backgrounds with UI Gradients</a>
+              <a class="dropdown-item" href="/google_fonts">Fonts with Google Fonts</a>
+              <a class="dropdown-item" href="/icons">Icons with Font Awesome</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sinatra">Sinatra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/advice">Advice</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <h1 class="heading">Ruby</h1>
+    <h3 class="subheader">Nested Data and Iteration</h3>
+    <p class="info">
+        <strong>Shallow Data Structures</strong><br>
+        At this point, we have learned about two key data structures... arrays and hashes! Although these are great, sometimes information gets more complex and cannot be properly representing in a single array or hash. For example, going back to the hash notes, our friend’s age isn’t the only thing we want to remember about our friend. They have interests, favorite foods, favorite colors, and more.
+        <br><br>
+        Have no fear, this problem can be solved with the addition of <strong><mark>nested data structures</mark></strong>! Arrays and hold more than just strings and numbers, they can actually hold other arrays. Here’s an example with a clothing closet that was given to us by Learn.
+    </p>
+    
+    <img src="/images/nested1.jpeg" alt="Picture Ruby Nested Data 1" style="width:600px;height:270px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        <strong>Accessing Nested Arrays</strong><br>
+        Looking at the example code above, answer the following questions on accessing elements in nested arrays. Remember that arrays start at index 0. Click on the box to check your answer!
+    </p>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet[0][1]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">"cardigan"</a>
+          </div>
+        </div>
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet[2][2]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">"flats"</a>
+          </div>
+        </div>
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet[1][0]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">"jeans"</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet[0][2]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">"blazer"</a>
+          </div>
+        </div>
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet[1][1]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">"skirt"</a>
+          </div>
+        </div>
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet[2][1]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">"heels"</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <p class="info">
+        <br>
+        If you didn’t get it correct, try to think back to when we were accessing single arrays by element in the previous notes. In these examples, the elements of the outer array are inner arrays... so wouldn’t we have to index the outer array AND the inner array? You can think of these arrays inside arrays to be like layers. Work from the outside in and access by element thinking of each array separately. For this example, it was one outer array holding inner arrays, so two layers means we have to provide two index values... but what if inside the inner arrays there were even more arrays? That’s three full layers to go through! This means that we would have to dive in and index three times to get something at the most inner layer.
+        <br><br>
+        <strong>Nesting Arrays in Hashes</strong><br>
+        Alright brace yourself, it’s about to get a bit more complicated... but not too bad. Hashes are natural fits for storing data that can be associated with a single unique value. These values can be more complex than just a string or number... they can actually be arrays or more hashes!
+        <br><br>
+        Learn provides us with a good example of why you would want to put arrays in for hash values. It’s an example involving a <strong>closet hash</strong>, with <strong>keys</strong> being strings that label different types of clothing and <strong>values</strong> that are arrays with the actual clothing items.
+    </p>
+    
+    <img src="/images/nested2.jpeg" alt="Picture Ruby Nested Data 2" style="width:800px;height:250px;padding-left:20px">
+    
+    <p class="info">
+        <br>
+        Practice accessing the correct elements in this data structure!
+    </p>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet[“tops”] 
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#"> [“rain jacket”, “cardigan”, “blazer”]</a>
+          </div>
+        </div>
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet[“footwear”][1]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">“heels”</a>
+          </div>
+        </div>
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet[“bottoms”][0]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">"jeans"</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet[“footwear”]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">[“sneakers”, “heels”, “flats”]</a>
+          </div>
+        </div>
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet["tops"][2]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">"blazer"</a>
+          </div>
+        </div>
+        <div class="col-sm dropdown" style="padding:5px;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            closet["bottoms"]
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">["jeans", "skirt", "capris"]</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <p class="info">
+        <br>
+        <strong>Nesting Hashes</strong><br>
+        Just like how we put arrays in arrays and arrays in hashes, we can put hashes in hashes as well. The possibilities are endless. You can have an array in a hash in an array in an array that’s in a hash that’s in an array... (15 years later)... in a hash! You can experiment with this idea on your own in Learn and test out accessing different values.
+    </p>
+    
+    <img src="/images/nested3.jpeg" alt="Picture Ruby Nested Data 3" style="width:800px;height:250px;padding-left:20px">
+
+    <p class="info">
+        <br>
+        This is an important concept to grasp and it will come in handy for your final project if you’re interested in doing something that involves organizing, interpreting, and accessing a lot of different data! As always, I recommend you do the labs in Learn regarding these. If you get stuck on how to use hashes in Ruby, you can always Youtube more lessons on nested data involving arrays and hashes. Don’t feel discouraged because this concept is confusing for sure. During my first year in college, we learned about nested data in the language Python, and covered it for about two weeks. In this curriculum, you’re only getting a few days. I believe in you!
+    </p>
+    
+    <br><br>
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/rcli">Continue to Ruby Command Line Interface</a>
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

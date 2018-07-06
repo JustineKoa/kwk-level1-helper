@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-      
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="/">KWK Level 1 Helper</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,13 +17,13 @@
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/command_line">Command Line</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Ruby
             </a>
@@ -46,7 +45,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/css">CSS</a>
           </li>
-          <li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               HTML & CSS Life Hacks
             </a>
@@ -67,43 +66,35 @@
       </div>
     </nav>
     
-    <h1 class="heading">Backgrounds with UI Gradients</h1>
+    <h1 class="heading">Ruby</h1>
+    <h3 class="subheader">Command Line Interface Applications</h3>
     
     <p class="info">
-      With the help of <strong>UI Gradients</strong>, you can get beautiful gradient backgrounds with a variety of colors. 
-      <br>
-      Click on the button to UI Gradients and press the shift key to get access to all kinds of different gradients that you can apply to your own site.
+        <strong>The Command Line Interface</strong><br>
+        The <strong><mark>CLI</mark></strong>, or <strong><mark>Command Line Interface</mark></strong>, is the way programmers interact with computers. It may seem weird or unnecessary at first, but it will become more convenient the more you program and soon these weird commands are going to just be second nature when you’re typing in your terminal. We’ve already talked about these commands in the Command Line section of the notes, so feel free to reference that if you forgot anything or just want a refresher.
+        <br><br>
+        A lot of this section is going to be review on things we have already learned; we're just putting it all together.
+        <br><br>
+        <strong>Capturing Input from the CLI</strong><br>
+        We’ve already learned about the built in action <strong><code>puts</code></strong>, which prints out to the console for the user to see. We have also learned about the build in action <strong><code>gets</code></strong> when we want to prompt the user for user input. We learned about the difference between <strong><code>gets</code></strong> and <strong><code>gets.chomp</code></strong> or <strong><code>gets.strip</code></strong> as well. Feel free to go back and read on it, but in case you forgot, they basically remove the newline at the end of the user input so you don’t get anything funky when you try to use the input later on.
+        <br><br>
+        Something that we haven’t gone over before is <strong><code>\n</code></strong>. The <strong>\</strong> is called an ‘escaped character’. This signals the computer that the next character after this is going to be special. The <strong>n</strong> that follows tells the computer that it is a newline. So, whenever we print a string with this <strong><mark>newline character</mark></strong> <strong><code>\n</code></strong>, it will print out a new line in place of the character. This is just one of many special characters used to format strings and output. Feel free to do some investigating and Google some other special characters!
     </p>
     
-    <div style="padding:20px;">
-      <a class="btn btn-primary btn-sm" style="padding:10px;" href="https://uigradients.com/#CoolSky" target="_blank">
-        Link to UI Gradients
-      </a>
-    </div>
+    <img src="/images/cli1.jpeg" alt="Picture Ruby Command Line Interface App 1" style="width:800px;height:300px;padding-left:20px">
     
-    <img src="/images/ui1.jpeg" alt="UI Gradients 1" style="width:700px;height:400px;padding-left:20px"><br><br>
     <p class="info">
-      Keep browsing until you find the perfect background and click on it!
-    </p>
-    <img src="/images/ui2.jpeg" alt="UI Gradients 2" style="width:700px;height:400px;padding-left:20px"><br><br>
-    <p class="info">
-      Once you have found the right color, press the enter/return key to have the CSS code pop up on your screen.
-    </p>
-    <img src="/images/ui3.jpeg" alt="UI Gradients 3" style="width:700px;height:400px;padding-left:20px"><br><br>
-    <p class="info">
-      Now all you have to do is copy and paste that code into your CSS file. Notice that we put it under body because we want it to apply to the entire webpage.
-    </p>
-    <img src="/images/ui4.jpeg" alt="UI Gradients 4" style="width:700px;height:170px;padding-left:20px"><br><br>
-    <p class="info">
-      And now you have an awesome gradient background for your site!
-    </p>
-    <img src="/images/ui5.jpeg" alt="UI Gradients 5" style="width:700px;height:400px;padding-left:20px"><br><br>
-    <p class="info">
-      Upon looking around the site, you will also notice that you have the option to change the angle of the gradients as well. Have fun with this new tool and good luck! <br><br>
+        <br>
+        <strong>Connecting the CLI to Ruby</strong><br>
+        In previous examples in the notes, we have taken user input and stored it into a variable to then be used in an outputted string with the use of interpolation. In this lesson, it is basically trying to reinforce the idea of taking in user input and using it somewhere else in your Ruby program.
+        <br><br>
+        <strong>Note:</strong> <strong><code>gets</code></strong> will take in user input and keep it as data with the type string. If we want to take in an integer and use it as an integer in our code later on (like doing math with it), we need to convert the input from the type string to the type integer. Do you remember how to do that? Feel free to check previous note sections or use Google to figure it out! It’s a simple method that can be applied to strings.
+        <br><br>
+        At this point, you’re ready to make your first CLI application! The prompt is creating your own calculator in a group. In my experience as a TA, students were able to finish this project pretty fast. Use your extra time to get creative and add different components to your calculator (make it themed, include advanced calculations like square roots or sine/cosine/tangent). Have fun and good luck! The next topic we will be covering is Object Orientation and that's a big one!
     </p>
     
-    <a class="btn btn-outline-primary btn-lg btn-block" href="/google_fonts">Continue to Fonts with Google Fonts</a>
-
+    <br><br>
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/roo">Continue to Ruby Object Orientation</a>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

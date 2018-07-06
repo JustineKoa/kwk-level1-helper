@@ -33,6 +33,14 @@ get '/rhashes' do
     erb :rhashes
 end
 
+get '/rnested' do
+    erb :rnested
+end
+
+get '/rcli' do
+    erb :rcli
+end
+
 get '/roo' do
     erb :roo
 end

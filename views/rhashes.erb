@@ -33,9 +33,9 @@
               <a class="dropdown-item" href="/rlogic">Logic and Conditionals</a>
               <a class="dropdown-item" href="/rloops">Loops</a>
               <a class="dropdown-item" href="/rarrays">Arrays and Iteration</a>
-              <a class="dropdown-item" href="/rhashes">Hashes - Coming Soon</a>
-              <a class="dropdown-item" href="#">Nested Data and Iteration - Coming Soon</a>
-              <a class="dropdown-item" href="#">CLI Apps - Coming Soon</a>
+              <a class="dropdown-item" href="/rhashes">Hashes and Iteration</a>
+              <a class="dropdown-item" href="/rnested">Nested Data and Iteration</a>
+              <a class="dropdown-item" href="/rcli">CLI Apps</a>
               <a class="dropdown-item" href="/roo">Object Orientation</a>
             </div>
           </li>
@@ -67,8 +67,61 @@
     </nav>
     
     <h1 class="heading">Ruby</h1>
-    <h3 class="subheader">Hashes - Under Construction</h3>
+    <h3 class="subheader">Hashes</h3>
+    <p class="info">
+      <strong>What is a hash?</strong><br>
+      At this point, we have already learned about arrays. <strong><mark>Hashes</mark></strong> are another core data structure in programming. The best way to think about a hash is like a dictionary; in fact, in some languages like Python, they have data structures similar to hashes that are called dictionaries. In dictionaries that we’re used to outside of programming, we take a word that we know and use it to look up a definition. A Ruby hash functions the same way. It holds many <strong><mark>keys</mark></strong> (like the words in a dictionary) that each have a corresponding <strong><mark>value</mark></strong>.
+      <br><br>
+      <strong>Creating and Populating a Hash</strong><br>
+      Similar to arrays, we can initialize or create a hash by either starting it empty or populating it with keys and values. You can add elements into your hash by providing a key and value pair. Instead of accessing elements of your hash by index values like we did for arrays, we instead can access values of the hash by providing the key.
+    </p>
+    
+    <img src="/images/rhash1.jpeg" alt="Picture Ruby Hashes 1" style="width:700px;height:300px;padding-left:20px">
   
+    <p class="info">
+      <br>
+      In the example, we created an empty hash and added a new element with it’s <strong>key</strong> called “New Key” and it’s <strong>value</strong> called “New Value”. We then use <strong><code>puts</code></strong> to print out this hash to the console to see that it updated the hash correctly. Then we are providing the hash named <strong>cart</strong> with a key of <strong>“Dog Toys”</strong>, and it is returning the value associated with the key “Dog Toys”, which is <strong>12</strong>. We use <strong><code>puts</code></strong> to print it out to the console.
+      <br><br>
+      <strong>Growing a Hash - Challenge Problem</strong><br>
+      Let’s say that we have two arrays, one array called <strong>friends_names</strong> and one array called <strong>friends_ages</strong>. We want to create one hash called <strong>friends</strong> that has <strong>keys</strong> that are friend names with their associated <strong>value</strong> being their ages. Assuming the friend names and the ages line up by index, how would you create the hash <strong>friends</strong>?
+      <br><br>
+      <strong>Hint: </strong>There are different ways to approach solving this problem, but I would recommend trying to use <strong><code>.each</code></strong> on one of the arrays and using a counter to keep track of the index you’re on.
+      <br><br>
+      The end of this lesson will have the solution!
+    </p>
+    
+    <h3 class="subheader">Hash Iteration</h3>
+    <p class="info">
+      Just like how we were able to iterate over arrays, we can do it with hashes as well. Ruby hashes have several methods that were created to make iterating over hashes easier. These methods are <strong><code>.keys</code></strong>, which returns an array of the hash’s keys, and <strong><code>.values</code></strong>, with returns an array of the hash’s values.
+      <br><br>
+      <strong>Keys and Values</strong><br>
+      We can use different methods of Ruby hashes to get specific information like obtaining an array of the hash’s keys and an array of the hash’s values.
+    </p>
+    
+    <img src="/images/rhash2.jpeg" alt="Picture Ruby Hashes 2" style="width:700px;height:400px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      <strong>Iterating over Keys and Values</strong><br>
+      Similar to arrays, Ruby hashes also have a <strong><code>.each</code></strong> method to loop over a hash.
+    </p>
+    
+    <img src="/images/rhash3.jpeg" alt="Picture Ruby Hashes 3" style="width:700px;height:400px;padding-left:20px">
+    
+    <p class="info">
+      <br>
+      Let’s break down that code. First we must specify which hash we are trying to iterate over, and we reference it by the name we gave it. Then we use the method  <strong><code>.each</code></strong> on it and follow it with the keyword <strong><code>do</code></strong>. Now, we include the double pipes surrounding two variable names. This is where it becomes different from arrays. With hashes, we need to provide two variables because the first one will represent the <strong>key</strong> and the second one will represent the <strong>value</strong>. For arrays, we only supplied one variable name because we only had one piece of information/data to keep track of. For hashes, we have two because each <strong>key</strong> has a corresponding <strong>value</strong>! Inside of our loop, we can refer to the key and value for each element in the hash by the variable names we supplied. Don’t forget to end your <strong><code>.each</code></strong> loop with the keyword <strong><code>end</code></strong>, and you’re good to go!
+    </p>
+    
+    <p class="info">
+      <strong>Growing a Hash - Challenge Solution</strong>
+    </p>
+    
+    <img src="/images/rhash4.jpeg" alt="Picture Ruby Hashes 4" style="width:900px;height:320px;padding-left:20px">
+    
+    <br><br>
+    <a class="btn btn-outline-primary btn-lg btn-block" href="/rnested">Continue to Ruby Nested Data and Iteration</a>
+    
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
