@@ -68,6 +68,7 @@
     </nav>
     
     <h1 class="heading">Command Line</h1>
+    <a class="info" href="#quiz">Jump to Quiz...</a>
     
     <h3 class="subheader">Background on Terminals</h3>
     <p class="info">Back in the olden days... aka the 80s... computers only had terminals to control them. There was no mouse, fancy icons, or desktop for the user to look at. All you had was a blinking cursor. Graphical User Interfaces (GUIs) were created to make computers more accessible! Developers (like you!) still use the terminal instead of the GUI because you have more control and you have a better understanding of what’s happening under the hood.</p>
@@ -157,6 +158,171 @@
     <br>
     A <mark><strong>relative path</strong></mark> to <strong>sushi.txt</strong> from favorite_things would be: <kbd>food/sushi.txt</kbd> 
     </p>
+    
+    <h3 id="quiz" class="subheader">Command Line Quiz Time!</h3>
+    <div style="padding-left:20px;">
+  		<form action="/command_line_quiz" method="POST">
+  		<p>Please make sure you answer <strong>every</strong> question before hitting 'submit quiz' so your score will get calculated correctly!</p>
+  		
+  		<%if @all_answer.length != 0%>
+  			<%num_correct = 0%>
+  			<%@all_answer.values.each do |answer|%>
+  				<%if answer =="correct"%>
+  					<%num_correct += 1%>
+  				<%end%>
+  			<%end%>
+  			<h5>Score: <%=num_correct%> / <%=@all_answer.length%></h5>
+  		<%end%>
+  			
+  		<h4>Question 1: What is the <mark>File Tree</mark>?</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q1a1" name="q1" class="custom-control-input" value="correct">
+  	  		<%if @all_answer[:q1] == "correct"%>
+  	  			<label class="custom-control-label" for="q1a1"><mark style="background-color:#95db96;">Where you views all the folders and files that you have</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a1">Where you views all the folders and files that you have</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q1a2" name="q1" class="custom-control-input" value="incorrect 1">
+  			<%if @all_answer[:q1] == "incorrect 1"%>
+  				<label class="custom-control-label" for="q1a2"><mark style="background-color:#ff4242;">Where you write code</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a2">Where you write code</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q1a3" name="q1" class="custom-control-input" value="incorrect 2">
+  			<%if @all_answer[:q1] == "incorrect 2"%>
+  				<label class="custom-control-label" for="q1a3"><mark style="background-color:#ff4242;">Where you execute command line instructions</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a3">Where you execute command line instructions </label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q1a4" name="q1" class="custom-control-input" value="incorrect 3">
+  			<%if @all_answer[:q1] == "incorrect 3"%>
+  				<label class="custom-control-label" for="q1a4"><mark style="background-color:#ff4242;">Where you take a nap under when you’re tired of coding</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a4">Where you take a nap under when you’re tired of coding</label>
+  	  		<%end%>
+  		</div>
+  		
+  		<br>
+  		<h4>Question 2: What is the <mark>Text Editor</mark>?</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q2a1" name="q2" class="custom-control-input" value="incorrect 1">
+  	  		<%if @all_answer[:q2] == "incorrect 1"%>
+  	  			<label class="custom-control-label" for="q2a1"><mark style="background-color:#ff4242;">Where you photoshop pictures of text</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a1">Where you photoshop pictures of text</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q2a2" name="q2" class="custom-control-input" value="incorrect 2">
+  			<%if @all_answer[:q2] == "incorrect 2"%>
+  				<label class="custom-control-label" for="q2a2"><mark style="background-color:#ff4242;">Where you execute command line instructions</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a2">Where you execute command line instructions</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q2a3" name="q2" class="custom-control-input" value="correct">
+  			<%if @all_answer[:q2] == "correct"%>
+  				<label class="custom-control-label" for="q2a3"><mark style="background-color:#95db96;">Where you write the code</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a3">Where you write the code</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q2a4" name="q2" class="custom-control-input" value="incorrect 3">
+  			<%if @all_answer[:q2] == "incorrect 3"%>
+  				<label class="custom-control-label" for="q2a4"><mark style="background-color:#ff4242;">Where you view all the folders and files that you have</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a4">Where you view all the folders and files that you have</label>
+  	  		<%end%>
+  		</div>
+  		
+  		<br>
+  		<h4>Question 3: What is the <mark>Terminal</mark>?</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q3a1" name="q3" class="custom-control-input" value="incorrect 1">
+  	  		<%if @all_answer[:q3] == "incorrect 1"%>
+  	  			<label class="custom-control-label" for="q3a1"><mark style="background-color:#ff4242;">Where you write the code</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a1">Where you write the code</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q3a2" name="q3" class="custom-control-input" value="correct">
+  			<%if @all_answer[:q3] == "correct"%>
+  				<label class="custom-control-label" for="q3a2"><mark style="background-color:#95db96;">Where you execute command line instructions</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a2">Where you execute command line instructions</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q3a3" name="q3" class="custom-control-input" value="incorrect 2">
+  			<%if @all_answer[:q3] == "incorrect 2"%>
+  				<label class="custom-control-label" for="q3a3"><mark style="background-color:#ff4242;">Where you view all the folders and files that you have</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a3">Where you view all the folders and files that you have</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q3a4" name="q3" class="custom-control-input" value="incorrect 3">
+  			<%if @all_answer[:q3] == "incorrect 3"%>
+  				<label class="custom-control-label" for="q3a4"><mark style="background-color:#ff4242;">Where you wait for your plane to arrive</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a4">Where you wait for your plane to arrive</label>
+  	  		<%end%>
+  		</div>
+  		
+  		<br>
+  		<h4>Question 4: What does <kbd>pwd</kbd> stand for?</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q4a1" name="q4" class="custom-control-input" value="correct">
+  	  		<%if @all_answer[:q4] == "correct"%>
+  	  			<label class="custom-control-label" for="q4a1"><mark style="background-color:#95db96;">Print Working Directory</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a1">Print Working Directory</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q4a2" name="q4" class="custom-control-input" value="incorrect 1">
+  			<%if @all_answer[:q4] == "incorrect 1"%>
+  				<label class="custom-control-label" for="q4a2"><mark style="background-color:#ff4242;">Print Web Domain</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a2">Print Web Domain</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q4a3" name="q4" class="custom-control-input" value="incorrect 2">
+  			<%if @all_answer[:q4] == "incorrect 2"%>
+  				<label class="custom-control-label" for="q4a3"><mark style="background-color:#ff4242;">Post Working Domain</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a3">Post Working Domain</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q4a4" name="q4" class="custom-control-input" value="incorrect 3">
+  			<%if @all_answer[:q4] == "incorrect 3"%>
+  				<label class="custom-control-label" for="q4a4"><mark style="background-color:#ff4242;">Panda Walking Downtown</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a4">Panda Walking Downtown</label>
+  	  		<%end%>
+  		</div>
+
+  		<br>
+  		<input class="btn btn-outline-primary" type="submit" value="Submit Quiz">
+  		</form>
+  	</div>
+  	
+  	<br>
     
     <a class="btn btn-outline-primary btn-lg btn-block" href="/rintro">Continue to Intro to Ruby</a>
     

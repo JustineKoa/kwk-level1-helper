@@ -6,6 +6,12 @@ get '/' do
 end
 
 get '/command_line' do
+    @all_answer = {}
+    erb :command_line
+end
+
+post '/command_line_quiz' do
+    @all_answer = params
     erb :command_line
 end
 
