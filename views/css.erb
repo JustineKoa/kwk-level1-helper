@@ -98,7 +98,7 @@
   		<h4 style="background-color:<%=@answers[:q1]%>;">Change the background color of this text!</h4>
   		
   		<div class="custom-control custom-radio">
-  	  		<input type="radio" id="q1a1" name="q1" class="custom-control-input" value="red">
+  	  		<input type="radio" id="q1a1" name="q1" class="custom-control-input" value="red" <%if @answers[:q1] == "red"%> checked="" <%end%>>
   	  		<%if @answers[:q1] == "red"%>
   	  			<label class="custom-control-label" for="q1a1"><mark><code>background-color:red;</code></mark></label>
   	  		<%else%>
@@ -106,7 +106,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q1a2" name="q1" class="custom-control-input" value="green">
+  			<input type="radio" id="q1a2" name="q1" class="custom-control-input" value="green" <%if @answers[:q1] == "green"%> checked="" <%end%>>
   			<%if @answers[:q1] == "green"%>
   				<label class="custom-control-label" for="q1a2"><mark><code>background-color:green;</code></mark></label>
   	  		<%else%>
@@ -114,7 +114,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q1a3" name="q1" class="custom-control-input" value="blue">
+  			<input type="radio" id="q1a3" name="q1" class="custom-control-input" value="blue <%if @answers[:q1] == "blue"%> checked="" <%end%>">
   			<%if @answers[:q1] == "blue"%>
   				<label class="custom-control-label" for="q1a3"><mark><code>background-color:blue;</code></mark></label>
   	  		<%else%>
@@ -122,7 +122,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q1a4" name="q1" class="custom-control-input" value="orange">
+  			<input type="radio" id="q1a4" name="q1" class="custom-control-input" value="orange" <%if @answers[:q1] == "orange"%> checked="" <%end%>>
   			<%if @answers[:q1] == "orange"%>
   				<label class="custom-control-label" for="q1a4"><mark><code>background-color:orange;</code></mark></label>
   	  		<%else%>
@@ -134,7 +134,7 @@
   		<h4 style="text-align:<%= @answers[:q2]%>;">Change the text-alignment of this text!</h4>
   		
   		<div class="custom-control custom-radio">
-  	  		<input type="radio" id="q2a1" name="q2" class="custom-control-input" value="center">
+  	  		<input type="radio" id="q2a1" name="q2" class="custom-control-input" value="center" <%if @answers[:q2] == "center"%> checked="" <%end%>>
   	  		<%if @answers[:q2] == "center"%>
   	  			<label class="custom-control-label" for="q2a1"><mark><code>text-align:center;</code></mark></label>
   	  		<%else%>
@@ -142,7 +142,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q2a2" name="q2" class="custom-control-input" value="right">
+  			<input type="radio" id="q2a2" name="q2" class="custom-control-input" value="right" <%if @answers[:q2] == "right"%> checked="" <%end%>>
   			<%if @answers[:q2] == "right"%>
   				<label class="custom-control-label" for="q2a2"><mark><code>text-align:right;</code></mark></label>
   	  		<%else%>
@@ -150,7 +150,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q2a3" name="q2" class="custom-control-input" value="left">
+  			<input type="radio" id="q2a3" name="q2" class="custom-control-input" value="left" <%if @answers[:q2] == "left"%> checked="" <%end%>>
   			<%if @answers[:q2] == "left"%>
   				<label class="custom-control-label" for="q2a3"><mark><code>text-align:left;</code></mark></label>
   	  		<%else%>
@@ -162,7 +162,7 @@
   		<h4 style="font-size:<%= @answers[:q3]%>">Change the font-size of this text!</h4>
   		
   		<div class="custom-control custom-radio">
-  	  		<input type="radio" id="q3a1" name="q3" class="custom-control-input" value="12pt">
+  	  		<input type="radio" id="q3a1" name="q3" class="custom-control-input" value="12pt" <%if @answers[:q3] == "12pt"%> checked="" <%end%>>
   	  		<%if @answers[:q3] == "12pt"%>
   	  			<label class="custom-control-label" for="q3a1"><mark><code>font-size:12pt;</code></mark></label>
   	  		<%else%>
@@ -170,7 +170,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q3a2" name="q3" class="custom-control-input" value="30pt">
+  			<input type="radio" id="q3a2" name="q3" class="custom-control-input" value="30pt" <%if @answers[:q3] == "30pt"%> checked="" <%end%>>
   			<%if @answers[:q3] == "30pt"%>
   				<label class="custom-control-label" for="q3a2"><mark><code>font-size:30pt;</code></mark></label>
   	  		<%else%>
@@ -178,7 +178,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q3a3" name="q3" class="custom-control-input" value="3pt">
+  			<input type="radio" id="q3a3" name="q3" class="custom-control-input" value="3pt" <%if @answers[:q3] == "3pt"%> checked="" <%end%>>
   			<%if @answers[:q3] == "3pt"%>
   				<label class="custom-control-label" for="q3a3"><mark><code>font-size:3pt;</code></mark></label>
   	  		<%else%>
@@ -186,7 +186,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q3a4" name="q3" class="custom-control-input" value="60pt">
+  			<input type="radio" id="q3a4" name="q3" class="custom-control-input" value="60pt" <%if @answers[:q3] == "60pt"%> checked="" <%end%>>
   			<%if @answers[:q3] == "60pt"%>
   				<label class="custom-control-label" for="q3a4"><mark><code>font-size:60pt;</code></mark></label>
   	  		<%else%>
@@ -198,7 +198,7 @@
   		<h4 style="border-style:<%= @answers[:q4]%>;">Change the border color of this text!</h4>
   		
   		<div class="custom-control custom-radio">
-  	  		<input type="radio" id="q4a1" name="q4" class="custom-control-input" value="dotted">
+  	  		<input type="radio" id="q4a1" name="q4" class="custom-control-input" value="dotted" <%if @answers[:q4] == "dotted"%> checked="" <%end%>>
   	  		<%if @answers[:q4] == "dotted"%>
   	  			<label class="custom-control-label" for="q4a1"><mark><code>border-style:dotted;</code></mark></label>
   	  		<%else%>
@@ -206,7 +206,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q4a2" name="q4" class="custom-control-input" value="dashed">
+  			<input type="radio" id="q4a2" name="q4" class="custom-control-input" value="dashed" <%if @answers[:q4] == "dashed"%> checked="" <%end%>>
   			<%if @answers[:q4] == "dashed"%>
   				<label class="custom-control-label" for="q4a2"><mark><code>border-style:dashed;</code></mark></label>
   	  		<%else%>
@@ -214,7 +214,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q4a3" name="q4" class="custom-control-input" value="solid">
+  			<input type="radio" id="q4a3" name="q4" class="custom-control-input" value="solid" <%if @answers[:q4] == "solid"%> checked="" <%end%>
   			<%if @answers[:q4] == "solid"%>
   				<label class="custom-control-label" for="q4a3"><mark><code>border-style:solid;</code></mark></label>
   	  		<%else%>
@@ -222,7 +222,7 @@
   	  		<%end%>
   		</div>
   		<div class="custom-control custom-radio">
-  			<input type="radio" id="q4a4" name="q4" class="custom-control-input" value="double">
+  			<input type="radio" id="q4a4" name="q4" class="custom-control-input" value="double" <%if @answers[:q4] == "double"%> checked="" <%end%>
   			<%if @answers[:q4] == "double"%>
   				<label class="custom-control-label" for="q4a4"><mark><code>border-style:double;</code></mark></label>
   	  		<%else%>
