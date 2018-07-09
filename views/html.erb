@@ -68,6 +68,7 @@
     </nav>
     
     <h1 class="heading">HTML</h1>
+    <a class="info" href="#quiz">Jump to Quiz...</a>
     <h3 class="subheader">What is HTML?</h3>
     <p class="info">
       <mark><strong>HTML</strong></mark>, or <mark><strong>HyperText Markup Language</strong></mark>, is a markup language which describes the structure and organization of web pages. Web browsers, such as Mozilla Firefox, Internet Explorer, and Google Chrome read HTML and use it to display websites. HTML is different from Ruby because it doesn’t have any logic behind the scenes. What you see is what you get! 
@@ -127,6 +128,170 @@
     <p class="info">
       HTML is used to set up the structure of a webpage, while CSS will be used later for styling. Back in the old days, sites were made solely by the use of HTML... which means they were pretty UGLY. Go on to learn about CSS to make your website look great!
     </p>
+    
+    <h3 id="quiz" class="subheader">HTML Quiz Time!</h3>
+    <div style="padding-left:20px;">
+  		<form action="/html_quiz" method="POST">
+  		<p>Please make sure you answer <strong>every</strong> question before hitting 'submit quiz' so your score will get calculated correctly!</p>
+  		
+  		<%if @answers.length != 0%>
+  			<%num_correct = 0%>
+  			<%@answers.values.each do |answer|%>
+  				<%if answer =="correct"%>
+  					<%num_correct += 1%>
+  				<%end%>
+  			<%end%>
+  			<h5>Score: <%=num_correct%> / <%=@answers.length%></h5>
+  		<%end%>
+  			
+  		<h4>Question 1: What is <mark>HTML</mark> responsible for?</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q1a1" name="q1" class="custom-control-input" value="incorrect 1">
+  	  		<%if @answers[:q1] == "incorrect 1"%>
+  	  			<label class="custom-control-label" for="q1a1"><mark style="background-color:#ff4242;">Logic/brains behind your website</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a1">Logic/brains behind your website</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q1a2" name="q1" class="custom-control-input" value="correct">
+  			<%if @answers[:q1] == "correct"%>
+  				<label class="custom-control-label" for="q1a2"><mark style="background-color:#95db96;">Structure and organization of the webpage</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a2">Structure and organization of the webpage</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q1a3" name="q1" class="custom-control-input" value="incorrect 2">
+  			<%if @answers[:q1] == "incorrect 2"%>
+  				<label class="custom-control-label" for="q1a3"><mark style="background-color:#ff4242;">Styling of the elements on the webpage</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a3">Styling of the elements on the webpage</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q1a4" name="q1" class="custom-control-input" value="incorrect 3">
+  			<%if @answers[:q1] == "incorrect 3"%>
+  				<label class="custom-control-label" for="q1a4"><mark style="background-color:#ff4242;">Doing behind the scenes code that doesn't actually show up</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a4">Doing behind the scenes code that doesn't actually show up</label>
+  	  		<%end%>
+  		</div>
+  		
+  		<br>
+  		<h4>Question 2: Which of the following cannot be done with <mark>tags</mark> in HTML?</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q2a1" name="q2" class="custom-control-input" value="incorrect 1">
+  	  		<%if @answers[:q2] == "incorrect 1"%>
+  	  			<label class="custom-control-label" for="q2a1"><mark style="background-color:#ff4242;">Showing text</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a1">Showing text</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q2a2" name="q2" class="custom-control-input" value="incorrect 2">
+  			<%if @answers[:q2] == "incorrect 2"%>
+  				<label class="custom-control-label" for="q2a2"><mark style="background-color:#ff4242;">Showing images</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a2">Showing images</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q2a3" name="q2" class="custom-control-input" value="correct">
+  			<%if @answers[:q2] == "correct"%>
+  				<label class="custom-control-label" for="q2a3"><mark style="background-color:#95db96;">Creating a hash</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a3">Creating a hash</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q2a4" name="q2" class="custom-control-input" value="incorrect 3">
+  			<%if @answers[:q2] == "incorrect 3"%>
+  				<label class="custom-control-label" for="q2a4"><mark style="background-color:#ff4242;">Organizing elements on a webpage</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a4">Organizing elements on a webpage</label>
+  	  		<%end%>
+  		</div>
+  		
+  		<br>
+  		<h4>Question 3: What goes in the <code><strong>&lt;body&gt;</strong></code> tag?</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q3a1" name="q3" class="custom-control-input" value="incorrect 1">
+  	  		<%if @answers[:q3] == "incorrect 1"%>
+  	  			<label class="custom-control-label" for="q3a1"><mark style="background-color:#ff4242;">Things you don't want displayed</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a1">Things you don't want displayed</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q3a2" name="q3" class="custom-control-input" value="incorrect 3">
+  			<%if @answers[:q3] == "incorrect 3"%>
+  				<label class="custom-control-label" for="q3a2"><mark style="background-color:#ff4242;">Ruby code</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a2">Ruby code</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q3a3" name="q3" class="custom-control-input" value="incorrect 2">
+  			<%if @answers[:q3] == "incorrect 2"%>
+  				<label class="custom-control-label" for="q3a3"><mark style="background-color:#ff4242;">Metadata</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a3">Metadata</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q3a4" name="q3" class="custom-control-input" value="correct">
+  			<%if @answers[:q3] == "correct"%>
+  				<label class="custom-control-label" for="q3a4"><mark style="background-color:#95db96;">HTML document's content</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a4">HTML document's content</label>
+  	  		<%end%>
+  		</div>
+  		
+  		<br>
+  		<h4>Question 4: Which of the following is <strong>not</strong> a reason why we want to keep our HTML code organized?</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q4a1" name="q4" class="custom-control-input" value="correct">
+  	  		<%if @answers[:q4] == "correct"%>
+  	  			<label class="custom-control-label" for="q4a1"><mark style="background-color:#95db96;">It won't run if it's unorganized</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a1">It won't run if it's unorganized</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q4a2" name="q4" class="custom-control-input" value="incorrect 1">
+  			<%if @answers[:q4] == "incorrect 1"%>
+  				<label class="custom-control-label" for="q4a2"><mark style="background-color:#ff4242;">It could still run, but we could get results we don't want</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a2">It could still run, but we could get results we don't want</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q4a3" name="q4" class="custom-control-input" value="incorrect 2">
+  			<%if @answers[:q4] == "incorrect 2"%>
+  				<label class="custom-control-label" for="q4a3"><mark style="background-color:#ff4242;">It is easier to read for us and others</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a3">It is easier to read for us and others</label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q4a4" name="q4" class="custom-control-input" value="incorrect 3">
+  			<%if @answers[:q4] == "incorrect 3"%>
+  				<label class="custom-control-label" for="q4a4"><mark style="background-color:#ff4242;">HTML doesn't give you error messages, so it's hard to see where you went wrong if you can't follow your own code</mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a4">HTML doesn't give you error messages, so it's hard to see where you went wrong if you can't follow your own code</label>
+  	  		<%end%>
+  		</div>
+
+  		<br>
+  		<input class="btn btn-outline-primary" type="submit" value="Submit Quiz">
+  		</form>
+  	</div>
+  	<br>
     
     <a class="btn btn-outline-primary btn-lg btn-block" href="/css">Continue to CSS</a>
     

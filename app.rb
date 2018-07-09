@@ -6,12 +6,12 @@ get '/' do
 end
 
 get '/command_line' do
-    @all_answer = {}
+    @answers = {}
     erb :command_line
 end
 
 post '/command_line_quiz' do
-    @all_answer = params
+    @answers = params
     erb :command_line
 end
 
@@ -52,10 +52,22 @@ get '/roo' do
 end
 
 get '/html' do
+    @answers = {}
+    erb :html
+end
+
+post '/html_quiz' do
+    @answers = params
     erb :html
 end
 
 get '/css' do
+    @answers = {}
+    erb :css
+end
+
+post '/css_quiz' do
+    @answers = params
     erb :css
 end
 

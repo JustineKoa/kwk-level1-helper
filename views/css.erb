@@ -68,6 +68,8 @@
     </nav>
 
     <h1 class="heading">CSS</h1>
+    <a class="info" href="#quiz">Jump to Simple CSS Examples...</a>
+    
     <h3 class="subheader">What is CSS?</h3>
     <p class="info"><mark><strong>CSS</strong></mark>, or <mark><strong>Cascading Style Sheets</strong></mark>, is its own language that defines how HTML is displayed on a page. It has its own syntax separate from HTML. CSS saves a lot of work. It can control the layout of multiple web pages all at once, which will be talked about below!</p>
     
@@ -88,6 +90,151 @@
     <p class="info">A common issue I noticed from students is that they write beautiful CSS code inside a separate CSS file, and wonder why none of it gets applied to their HTML. This is because we must give our HTML some way of knowing where the CSS is. Using <code>&lt;link&gt;</code> element in the <code>&lt;head&gt;</code> of our HTML file, we are able to link our HTML to an external CSS file. Make sure that the href attribute is pointing to the location of your CSS file.</p>
     <img src="/images/css3.jpeg" alt="CSS example 3" style="width:700px;height:400px;padding-left:20px"><br><br>
     <p class="info">In the example above, href is pointing to a CSS file named styles.css in a Public folder.</p>
+    
+    <h3 id="quiz" class="subheader">Simple CSS Examples:</h3>
+    <div style="padding-left:20px;">
+  		<form action="/css_quiz" method="POST">
+  			
+  		<h4 style="background-color:<%=@answers[:q1]%>;">Change the background color of this text!</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q1a1" name="q1" class="custom-control-input" value="red">
+  	  		<%if @answers[:q1] == "red"%>
+  	  			<label class="custom-control-label" for="q1a1"><mark><code>background-color:red;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a1"><code>background-color:red;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q1a2" name="q1" class="custom-control-input" value="green">
+  			<%if @answers[:q1] == "green"%>
+  				<label class="custom-control-label" for="q1a2"><mark><code>background-color:green;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a2"><code>background-color:green;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q1a3" name="q1" class="custom-control-input" value="blue">
+  			<%if @answers[:q1] == "blue"%>
+  				<label class="custom-control-label" for="q1a3"><mark><code>background-color:blue;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a3"><code>background-color:blue;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q1a4" name="q1" class="custom-control-input" value="orange">
+  			<%if @answers[:q1] == "orange"%>
+  				<label class="custom-control-label" for="q1a4"><mark><code>background-color:orange;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q1a4"><code>background-color:orange;</code></label>
+  	  		<%end%>
+  		</div>
+  		
+  		<br>
+  		<h4 style="text-align:<%= @answers[:q2]%>;">Change the text-alignment of this text!</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q2a1" name="q2" class="custom-control-input" value="center">
+  	  		<%if @answers[:q2] == "center"%>
+  	  			<label class="custom-control-label" for="q2a1"><mark><code>text-align:center;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a1"><code>text-align:center;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q2a2" name="q2" class="custom-control-input" value="right">
+  			<%if @answers[:q2] == "right"%>
+  				<label class="custom-control-label" for="q2a2"><mark><code>text-align:right;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a2"><code>text-align:right;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q2a3" name="q2" class="custom-control-input" value="left">
+  			<%if @answers[:q2] == "left"%>
+  				<label class="custom-control-label" for="q2a3"><mark><code>text-align:left;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q2a3"><code>text-align:left;</code></label>
+  	  		<%end%>
+  		</div>
+  		
+  		<br>
+  		<h4 style="font-size:<%= @answers[:q3]%>">Change the font-size of this text!</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q3a1" name="q3" class="custom-control-input" value="12pt">
+  	  		<%if @answers[:q3] == "12pt"%>
+  	  			<label class="custom-control-label" for="q3a1"><mark><code>font-size:12pt;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a1"><code>font-size:12pt;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q3a2" name="q3" class="custom-control-input" value="30pt">
+  			<%if @answers[:q3] == "30pt"%>
+  				<label class="custom-control-label" for="q3a2"><mark><code>font-size:30pt;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a2"><code>font-size:30pt;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q3a3" name="q3" class="custom-control-input" value="3pt">
+  			<%if @answers[:q3] == "3pt"%>
+  				<label class="custom-control-label" for="q3a3"><mark><code>font-size:3pt;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a3"><code>font-size:3pt;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q3a4" name="q3" class="custom-control-input" value="60pt">
+  			<%if @answers[:q3] == "60pt"%>
+  				<label class="custom-control-label" for="q3a4"><mark><code>font-size:60pt;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q3a4"><code>font-size:60pt;</code></label>
+  	  		<%end%>
+  		</div>
+  		
+  		<br>
+  		<h4 style="border-style:<%= @answers[:q4]%>;">Change the border color of this text!</h4>
+  		
+  		<div class="custom-control custom-radio">
+  	  		<input type="radio" id="q4a1" name="q4" class="custom-control-input" value="dotted">
+  	  		<%if @answers[:q4] == "dotted"%>
+  	  			<label class="custom-control-label" for="q4a1"><mark><code>border-style:dotted;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a1"><code>border-style:dotted;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q4a2" name="q4" class="custom-control-input" value="dashed">
+  			<%if @answers[:q4] == "dashed"%>
+  				<label class="custom-control-label" for="q4a2"><mark><code>border-style:dashed;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a2"><code>border-style:dashed;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q4a3" name="q4" class="custom-control-input" value="solid">
+  			<%if @answers[:q4] == "solid"%>
+  				<label class="custom-control-label" for="q4a3"><mark><code>border-style:solid;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a3"><code>border-style:solid;</code></label>
+  	  		<%end%>
+  		</div>
+  		<div class="custom-control custom-radio">
+  			<input type="radio" id="q4a4" name="q4" class="custom-control-input" value="double">
+  			<%if @answers[:q4] == "double"%>
+  				<label class="custom-control-label" for="q4a4"><mark><code>border-style:double;</code></mark></label>
+  	  		<%else%>
+  	  			<label class="custom-control-label" for="q4a4"><code>border-style:double;</code></label>
+  	  		<%end%>
+  		</div>
+
+  		<br>
+  		<input class="btn btn-outline-primary" type="submit" value="Test it out!">
+  		</form>
+  	</div>
+  	<br>
     
     <a class="btn btn-outline-primary btn-lg btn-block" href="/bootstrap">Continue to HTML & CSS Life Hacks</a>
     

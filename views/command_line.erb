@@ -164,21 +164,21 @@
   		<form action="/command_line_quiz" method="POST">
   		<p>Please make sure you answer <strong>every</strong> question before hitting 'submit quiz' so your score will get calculated correctly!</p>
   		
-  		<%if @all_answer.length != 0%>
+  		<%if @answers.length != 0%>
   			<%num_correct = 0%>
-  			<%@all_answer.values.each do |answer|%>
+  			<%@answers.values.each do |answer|%>
   				<%if answer =="correct"%>
   					<%num_correct += 1%>
   				<%end%>
   			<%end%>
-  			<h5>Score: <%=num_correct%> / <%=@all_answer.length%></h5>
+  			<h5>Score: <%=num_correct%> / <%=@answers.length%></h5>
   		<%end%>
   			
   		<h4>Question 1: What is the <mark>File Tree</mark>?</h4>
   		
   		<div class="custom-control custom-radio">
   	  		<input type="radio" id="q1a1" name="q1" class="custom-control-input" value="correct">
-  	  		<%if @all_answer[:q1] == "correct"%>
+  	  		<%if @answers[:q1] == "correct"%>
   	  			<label class="custom-control-label" for="q1a1"><mark style="background-color:#95db96;">Where you views all the folders and files that you have</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q1a1">Where you views all the folders and files that you have</label>
@@ -186,7 +186,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q1a2" name="q1" class="custom-control-input" value="incorrect 1">
-  			<%if @all_answer[:q1] == "incorrect 1"%>
+  			<%if @answers[:q1] == "incorrect 1"%>
   				<label class="custom-control-label" for="q1a2"><mark style="background-color:#ff4242;">Where you write code</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q1a2">Where you write code</label>
@@ -194,7 +194,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q1a3" name="q1" class="custom-control-input" value="incorrect 2">
-  			<%if @all_answer[:q1] == "incorrect 2"%>
+  			<%if @answers[:q1] == "incorrect 2"%>
   				<label class="custom-control-label" for="q1a3"><mark style="background-color:#ff4242;">Where you execute command line instructions</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q1a3">Where you execute command line instructions </label>
@@ -202,7 +202,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q1a4" name="q1" class="custom-control-input" value="incorrect 3">
-  			<%if @all_answer[:q1] == "incorrect 3"%>
+  			<%if @answers[:q1] == "incorrect 3"%>
   				<label class="custom-control-label" for="q1a4"><mark style="background-color:#ff4242;">Where you take a nap under when you’re tired of coding</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q1a4">Where you take a nap under when you’re tired of coding</label>
@@ -214,7 +214,7 @@
   		
   		<div class="custom-control custom-radio">
   	  		<input type="radio" id="q2a1" name="q2" class="custom-control-input" value="incorrect 1">
-  	  		<%if @all_answer[:q2] == "incorrect 1"%>
+  	  		<%if @answers[:q2] == "incorrect 1"%>
   	  			<label class="custom-control-label" for="q2a1"><mark style="background-color:#ff4242;">Where you photoshop pictures of text</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q2a1">Where you photoshop pictures of text</label>
@@ -222,7 +222,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q2a2" name="q2" class="custom-control-input" value="incorrect 2">
-  			<%if @all_answer[:q2] == "incorrect 2"%>
+  			<%if @answers[:q2] == "incorrect 2"%>
   				<label class="custom-control-label" for="q2a2"><mark style="background-color:#ff4242;">Where you execute command line instructions</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q2a2">Where you execute command line instructions</label>
@@ -230,7 +230,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q2a3" name="q2" class="custom-control-input" value="correct">
-  			<%if @all_answer[:q2] == "correct"%>
+  			<%if @answers[:q2] == "correct"%>
   				<label class="custom-control-label" for="q2a3"><mark style="background-color:#95db96;">Where you write the code</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q2a3">Where you write the code</label>
@@ -238,7 +238,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q2a4" name="q2" class="custom-control-input" value="incorrect 3">
-  			<%if @all_answer[:q2] == "incorrect 3"%>
+  			<%if @answers[:q2] == "incorrect 3"%>
   				<label class="custom-control-label" for="q2a4"><mark style="background-color:#ff4242;">Where you view all the folders and files that you have</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q2a4">Where you view all the folders and files that you have</label>
@@ -250,7 +250,7 @@
   		
   		<div class="custom-control custom-radio">
   	  		<input type="radio" id="q3a1" name="q3" class="custom-control-input" value="incorrect 1">
-  	  		<%if @all_answer[:q3] == "incorrect 1"%>
+  	  		<%if @answers[:q3] == "incorrect 1"%>
   	  			<label class="custom-control-label" for="q3a1"><mark style="background-color:#ff4242;">Where you write the code</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q3a1">Where you write the code</label>
@@ -258,7 +258,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q3a2" name="q3" class="custom-control-input" value="correct">
-  			<%if @all_answer[:q3] == "correct"%>
+  			<%if @answers[:q3] == "correct"%>
   				<label class="custom-control-label" for="q3a2"><mark style="background-color:#95db96;">Where you execute command line instructions</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q3a2">Where you execute command line instructions</label>
@@ -266,7 +266,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q3a3" name="q3" class="custom-control-input" value="incorrect 2">
-  			<%if @all_answer[:q3] == "incorrect 2"%>
+  			<%if @answers[:q3] == "incorrect 2"%>
   				<label class="custom-control-label" for="q3a3"><mark style="background-color:#ff4242;">Where you view all the folders and files that you have</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q3a3">Where you view all the folders and files that you have</label>
@@ -274,7 +274,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q3a4" name="q3" class="custom-control-input" value="incorrect 3">
-  			<%if @all_answer[:q3] == "incorrect 3"%>
+  			<%if @answers[:q3] == "incorrect 3"%>
   				<label class="custom-control-label" for="q3a4"><mark style="background-color:#ff4242;">Where you wait for your plane to arrive</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q3a4">Where you wait for your plane to arrive</label>
@@ -286,7 +286,7 @@
   		
   		<div class="custom-control custom-radio">
   	  		<input type="radio" id="q4a1" name="q4" class="custom-control-input" value="correct">
-  	  		<%if @all_answer[:q4] == "correct"%>
+  	  		<%if @answers[:q4] == "correct"%>
   	  			<label class="custom-control-label" for="q4a1"><mark style="background-color:#95db96;">Print Working Directory</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q4a1">Print Working Directory</label>
@@ -294,7 +294,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q4a2" name="q4" class="custom-control-input" value="incorrect 1">
-  			<%if @all_answer[:q4] == "incorrect 1"%>
+  			<%if @answers[:q4] == "incorrect 1"%>
   				<label class="custom-control-label" for="q4a2"><mark style="background-color:#ff4242;">Print Web Domain</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q4a2">Print Web Domain</label>
@@ -302,7 +302,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q4a3" name="q4" class="custom-control-input" value="incorrect 2">
-  			<%if @all_answer[:q4] == "incorrect 2"%>
+  			<%if @answers[:q4] == "incorrect 2"%>
   				<label class="custom-control-label" for="q4a3"><mark style="background-color:#ff4242;">Post Working Domain</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q4a3">Post Working Domain</label>
@@ -310,7 +310,7 @@
   		</div>
   		<div class="custom-control custom-radio">
   			<input type="radio" id="q4a4" name="q4" class="custom-control-input" value="incorrect 3">
-  			<%if @all_answer[:q4] == "incorrect 3"%>
+  			<%if @answers[:q4] == "incorrect 3"%>
   				<label class="custom-control-label" for="q4a4"><mark style="background-color:#ff4242;">Panda Walking Downtown</mark></label>
   	  		<%else%>
   	  			<label class="custom-control-label" for="q4a4">Panda Walking Downtown</label>
